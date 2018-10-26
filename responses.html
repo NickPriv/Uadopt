@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Responses</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var queryString = decodeURIComponent(window.location.search);
+	var queries = queryString.split("?");
+	for (var i = 1; i < queries.length; i++) {
+		var query = queries[i].split(/[: ]/);
+		if (query[0] == "name")
+			document.write("Thank you, " + query[2] + ".<br>"); // query[1] is empty string between ':' and ' '
+		else if (query[0] == "age")
+			document.write("You are " + query[2] + " years old.<br>");
+		else if (query[0] == "marital")
+			document.write("You are " + query[2] + ".<br>");
+		else if (query[0] == "home")
+			document.write("Your home is of " + query[2] + " size.<br>");
+		else if (query[0] == "backyard")
+			document.write("Your backyard is of " + query[2] + " size.<br>");
+		else if (query[0] == "children")
+			document.write("You have " + query[2] + " children.<br>");
+		else if (query[0] == "income")
+			document.write("Your income is " + query[2] + ".<br>");
+		else if (query[0] == "activity")
+			document.write("You rated your activity level a " + query[2] + " on a scale of 1 to 5.<br>");
+		else if (query[0] == "time")
+			document.write("You rated your amount of free time a " + query[2] + " on a scale of 1 to 5.<br>");
+		else if (query[0] == "experience" && query[2] != "N/A")
+			document.write("You mentioned you have had a " + query[2] + " " + query[3] + " before.<br>");
+		else if (query[0] == "experience")
+			continue;
+		else if (query[0] == "size") {
+			document.write("<br>Finally, here is a summary of your preferences:<br>");
+			document.write(query[0] + ": " + query[2] + "<br>");
+		}
+		else
+			document.write(query[0] + ": " + query[2] + "<br>");
+	}
+	document.write("<br><a href=\"index.html\">Back to homepage</a>");
+	</script>
+</body>
+</html>
