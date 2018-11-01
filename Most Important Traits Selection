@@ -1,0 +1,14 @@
+
+<h2>Select the Traits that are Most Important to You</h2>
+<input type="checkbox" name="Noise/Barking" value="Noise/Barking"> Noise/Barking<br>
+<input type="checkbox" name="Activity Level" value="Activity Level"> Activity Level<br>
+<input type="checkbox" name="Intelligence" value="Intelligence"> Intelligence<br>
+<input type="checkbox" name="Hair Shedding" value="Hair Shedding"> Hair Shedding/barking<br>
+<input type="checkbox" name="Good With Children" value="Good With Children"> Good With Children<br>
+<input type="checkbox" name="Cuddly" value="Cuddly"> Cuddly<br>
+<input type="checkbox" name="Temperament" value="Temperament"> Temperament<br>
+<input type="checkbox" name="Time Commitment" value="Time Commitment"> Time Commitment<br>
+<input type="checkbox" name="Easy To Train" value="Easy To Train"> Easy To Train<br>
+<input type="checkbox" name="Size" value="Size"> Size<br>
+<input type="checkbox" name="Health" value="Health"> Health<br>
+
