@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enter User Info</title>
+</head>
+<body>
+	<p>User ID #: <span id="id_num"></span></p>
+<form class="form" id="frm1">
+		<ol>
+		<li>What is your first name?</li><br>
+		<input type="text" name="name" required><br><br>
+		<li>What is your age?</li><br>
+		<input type="number" name="age"required><br><br>
+		<li>What is your marital status?</li><br>
+		<input type="radio" name="marital" value="single" required>Single or Unmarried<br>
+		<input type="radio" name="marital" value="married" required>Married<br><br>
+		<li>How large is your home?</li><br>
+		<input type="radio" name="home" value="small" required>Small<br>
+		<input type="radio" name="home" value="medium" required>Medium<br>
+		<input type="radio" name="home" value="large" required>Large<br><br>
+		<li>What is your backyard size?</li><br>
+		<input type="radio" name="backyard" value="no" required>None<br>
+		<input type="radio" name="backyard" value="small" required>Small<br>
+		<input type="radio" name="backyard" value="medium" required>Medium<br>
+		<input type="radio" name="backyard" value="large" required>Large<br><br>
+		<li>How many children do you have?</li><br>
+		<input type="number" name="children" required><br><br>
+		<li>What is your income status?</li><br>
+		<input type="radio" name="income" value="stable" required>Stable<br>
+		<input type="radio" name="income" value="unstable" required>Unstable<br><br>
+		<li>What is your activity level?</li><br>
+		Low <input type="range" name="activity" min="1" max="5" required> High<br><br>
+		<li>How much time (on average) would you have per day to spend time with your dog?</li><br>
+		Not Much <input type="range" name="time" min="1" max="5" required> A Lot<br><br>
+		<li>Do you have any past dog experience? If so, name your breed.</li><br>
+		<input list="breeds" name="experience" required>
+  		<datalist id="breeds">
+    		<option value="N/A">
+    		<option value="Golden Retriever">
+    		<option value="Poodle">
+    		<option value="Bulldog">
+    		<option value="Beagle">
+    		<option value="Chihuahua">
+    		<option value="Pug">
+    		<option value="Boxer">
+    		<option value="Goldendoodle">
+  		</datalist>
+  	</form>
+  	<p>Do you have a pet in mind?</p>
+  	<button type="button" class="button" onclick="location.href='breed_search.html';">Yes</button>
+  	<button type="button" class="button" href="">No</button>
+</body>
+</html>
