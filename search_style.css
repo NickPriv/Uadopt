@@ -1,0 +1,70 @@
+#myInput {
+    width: 50%; /* %-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 0px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    /*padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd; 
+}
+
+#myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+.button {
+    margin: 5px;
+    right: 0px;
+    background-color: #ffffff; 
+    color: black;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    border: 2px solid #555555;
+    width: 15%;
+    min-width: 100px;
+}
+
+.button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.search_table {
+    height: 90vh;
+    bottom: 0;
+    overflow: auto;
+}
+
+.continue {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 65px;
+}
+
+.search_bar {
+    left: 60vh;
+    overflow: scroll;
+}

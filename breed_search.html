@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Breeds</title>
+	<link rel="stylesheet" type="text/css" href="search_style.css">
+	<script src="./search_script.js"></script>
+</head>
+<body>
+	<div id="search bar">
+	<input type="text" id="myInput" onkeyup="search()" placeholder="Search for breeds...">
+	<span id="selected"></span>
+</div>
+	<div class="search_table">
+	<form id="frm1">
+	<table id="myTable">
+	  <!--<tr class="header">
+	    <th style="width:60%;"></th>
+	    <th style="width:40%;"></th>
+	  </tr>-->
+	  <tr>
+	    <td><img src="http://www.dogbreedchart.com/img/beagle.jpg"></td>
+	    <td>Beagle</td>
+	    <td><input type="checkbox" name="breed1" value="Beagle" class="mycheckbox" onclick="update()"></td>
+	    <span class="checkmark"></span>
+	  </tr>
+	  <tr>
+	    <td><img src="http://www.dogbreedchart.com/img/chihuahua.jpg"></td>
+	    <td>Chihuahua</td>
+	    <td><input type="checkbox" name="breed2" value="Chihuahua" class="mycheckbox" onclick="update()"></td>
+	  </tr>
+	  <tr>
+	    <td><img src="http://www.dogbreedchart.com/img/golden-retriever.jpg"></td>
+	    <td>Golden Retriever</td>
+	    <td><input type="checkbox" name="breed3" value="Golden Retriever" class="mycheckbox" onclick="update()"></td>
+	  </tr>
+	  <tr>
+	    <td><img src="http://www.dogbreedchart.com/img/pug.jpg"></td>
+	    <td>Pug</td>
+	    <td><input type="checkbox" name="breed4" value="Pug" class="mycheckbox" onclick="update()"></td>
+	  </tr>
+	</table>
+	</form>
+</div>
+<div class="continue">
+	<button type="button" class="button" onclick="send()">Continue</button>
+</div>
+</body>
+</html>

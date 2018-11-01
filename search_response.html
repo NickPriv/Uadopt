@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Selection</title>
+</head>
+<body>
+<script type="text/javascript">
+	var queryString = decodeURIComponent(window.location.search);
+	var queries = queryString.split("?");
+	document.write("You selected:<br><br>");
+	for (var i=1; i<queries.length; i++) {
+		document.write(queries[i] + "<br>");
+	}
+</script>
+</body>
+</html>
