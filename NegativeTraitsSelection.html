@@ -3,17 +3,152 @@
     <head>
         <title>Uadopt</title>
         <link rel="stylesheet" href="style2.css">
-        <script type="text/javascript" src="./search_script.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     </head>
     
-    <body onload="javascript:displaySelectedBreeds()">
-        <div>
-            <h1>Select any traits that you dislike:</h1>
-            <form id="frm1">
-            <span id="info"></span>     
-            </form>  
-        </div>
-        <button type="button" class="button" onclick="javascript:selectInitialTraits();">Next</button>
+    <body background = "http://s9.tinypic.com/2j1v1xc_th.jpg">
+        
+        <h1 class="teal-text">Select any traits that you dislike:</h1>  
+        <form action="/submit-data">
+            <div id="individual-result">
+            <u class="maroon-text"><strong ><font   size="16">Gordon Setter</font></strong></u><br>
+            <img class="breed-border" src="http://s9.tinypic.com/2mdgiyw_th.jpg" height=128  width=128 ><br>
+            <ul id="table">
+                <ul id="trait-list">
+                    <li id=#barking>Barking level:</li>
+                    <li id=#activity>Activity level:</li>
+                    <li id=#intelligence>Intelligence:</li>
+                    <li id=#shedding>Shedding:</li>
+                    <li id=#kid-friendliness>Good with kids:</li>
+                    <li id=#cuddliness>Cuddliness:</li>
+                    <li id=#temperament>Temperament:</li>
+                    <li id=#time>Time commitment:</li>
+                    <li id=#train>Easy to train:</li>
+                    <li id=#size>Size:</li>
+                    <li id=#health>Health:</li>                   
+                </ul>
+                <ul id="rating"> 
+                    <li id=#barking> 5</li>
+                    <li id=#activity>5</li>
+                    <li id=#intelligence>5 </li>
+                    <li id=#shedding>5</li>
+                    <li id=#kid-friendliness>3</li>
+                    <li id=#cuddliness>3</li>
+                    <li id=#temperament>4</li>
+                    <li id=#time>4</li>
+                    <li id=#train>5 </li>
+                    <li id=#size>3</li>
+                    <li id=#health>4</li>                   
+                </ul>
+                <ul id="check-box">
+                    <li id=#barking><input type="checkbox"></li>
+                    <li id=#activity><input type="checkbox"></li>
+                    <li id=#intelligence><input type="checkbox"></li>
+                    <li id=#shedding><input type="checkbox"></li>
+                    <li id=#kid-friendliness><input type="checkbox"></li>
+                    <li id=#cuddliness><input type="checkbox"></li>
+                    <li id=#temperament><input type="checkbox"></li>
+                    <li id=#time><input type="checkbox"></li>
+                    <li id=#train><input type="checkbox"></li>
+                    <li id=#size><input type="checkbox"></li>
+                    <li id=#health><input type="checkbox"></li>                   
+                </ul>
+            </ul>
+            </div>
+            <div id="individual-result">
+            <u class="maroon-text"><strong ><font   size="16">Shiba Inu</font></strong></u><br>
+            <img class="breed-border" src="http://oi68.tinypic.com/333v7dy.jpg" height=128  width=128 ><br>
+            <ul id="table">
+                <ul id="trait-list">
+                    <li id=#barking>Barking level:</li>
+                    <li id=#activity>Activity level:</li>
+                    <li id=#intelligence>Intelligence:</li>
+                    <li id=#shedding>Shedding:</li>
+                    <li id=#kid-friendliness>Good with kids:</li>
+                    <li id=#cuddliness>Cuddliness:</li>
+                    <li id=#temperament>Temperament:</li>
+                    <li id=#time>Time commitment:</li>
+                    <li id=#train>Easy to train:</li>
+                    <li id=#size>Size:</li>
+                    <li id=#health>Health:</li>                   
+                </ul>
+                <ul id="rating"> 
+                    <li id=#barking> 1</li>
+                    <li id=#activity>3</li>
+                    <li id=#intelligence>5 </li>
+                    <li id=#shedding>3</li>
+                    <li id=#kid-friendliness>3</li>
+                    <li id=#cuddliness>3</li>
+                    <li id=#temperament>4</li>
+                    <li id=#time>2</li>
+                    <li id=#train>3</li>
+                    <li id=#size>2</li>
+                    <li id=#health>4</li>
+
+                </ul>
+                <ul id="check-box">
+                    <li id=#barking><input type="checkbox"></li>
+                    <li id=#activity><input type="checkbox"></li>
+                    <li id=#intelligence><input type="checkbox"></li>
+                    <li id=#shedding><input type="checkbox"></li>
+                    <li id=#kid-friendliness><input type="checkbox"></li>
+                    <li id=#cuddliness><input type="checkbox"></li>
+                    <li id=#temperament><input type="checkbox"></li>
+                    <li id=#time><input type="checkbox"></li>
+                    <li id=#train><input type="checkbox"></li>
+                    <li id=#size><input type="checkbox"></li>
+                    <li id=#health><input type="checkbox"></li>                   
+                </ul>
+            </ul>
+            </div>
+            <div id="individual-result">
+            <u class="maroon-text"><strong ><font   size="16">Samoyed</font></strong></u><br>
+            <img class="breed-border" src="http://oi65.tinypic.com/9lfo0i.jpg" height=128  width=128 ><br>
+            <ul id="table">
+                <ul id="trait-list">
+                    <li id=#barking>Barking level:</li>
+                    <li id=#activity>Activity level:</li>
+                    <li id=#intelligence>Intelligence:</li>
+                    <li id=#shedding>Shedding:</li>
+                    <li id=#kid-friendliness>Good with kids:</li>
+                    <li id=#cuddliness>Cuddliness:</li>
+                    <li id=#temperament>Temperament:</li>
+                    <li id=#time>Time commitment:</li>
+                    <li id=#train>Easy to train:</li>
+                    <li id=#size>Size:</li>
+                    <li id=#health>Health:</li>                   
+                </ul>
+                <ul id="rating"> 
+                    <li id=#barking> 4</li>
+                    <li id=#activity>4</li>
+                    <li id=#intelligence>4</li>
+                    <li id=#shedding>4</li>
+                    <li id=#kid-friendliness>5</li>
+                    <li id=#cuddliness>5</li>
+                    <li id=#temperament>4</li>
+                    <li id=#time>4</li>
+                    <li id=#train>4 </li>
+                    <li id=#size>4</li>
+                    <li id=#health>4</li>            
+                </ul>
+                <ul id="check-box">
+                    <li id=#barking><input type="checkbox"></li>
+                    <li id=#activity><input type="checkbox"></li>
+                    <li id=#intelligence><input type="checkbox"></li>
+                    <li id=#shedding><input type="checkbox"></li>
+                    <li id=#kid-friendliness><input type="checkbox"></li>
+                    <li id=#cuddliness><input type="checkbox"></li>
+                    <li id=#temperament><input type="checkbox"></li>
+                    <li id=#time><input type="checkbox"></li>
+                    <li id=#train><input type="checkbox"></li>
+                    <li id=#size><input type="checkbox"></li>
+                    <li id=#health><input type="checkbox"></li>                   
+                </ul>
+            </ul>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        
     </body>
     
 </html>
