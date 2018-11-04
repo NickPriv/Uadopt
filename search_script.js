@@ -127,7 +127,7 @@ function displayQuestionnaire() { // Generates html on preference_selection.html
 		else if (queries[i] == "barking") {
 			questionnaire += "<p>What do you want your dog's noise/barking level to be like?</p>" +
 		  "<input type=\"radio\" name=\"barking\" value=\"5\"> A guard dog with a strong bark<br>" +
-		  "<input type\"radio\" name=\"barking\" value=\"\"> No barking<br>" +
+		  "<input type\"radio\" name=\"barking\" value=\"1\"> No barking<br>" +
 		  "<input type=\"radio\" name=\"barking\" value=\"3\"> No preference<br><br>";
 		}
 	}
