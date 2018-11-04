@@ -3,30 +3,17 @@
     <head>
         <title>Uadopt</title>
         <link rel="stylesheet" href="style2.css">
+        <script type="text/javascript" src="./search_script.js"></script>
     </head>
     
-    <body>
+    <body onload="javascript:displaySelectedBreeds()">
         <div>
-            <h1>Select any traits that you dislike:</h1>       
-            <u><em><strong><font size="20">Gordon Setter</font></strong></em></u>   <br>
-            <img src="http://s9.tinypic.com/2mdgiyw_th.jpg" height=112  width=128 >
-            <p1>
-                <ul>
-                    <li>Barking level: 5  <input type="checkbox"> </li>
-                    <li>Activity level: 5  <input type="checkbox"> </li>
-                    <li>Intelligence: 5  <input type="checkbox"> </li>
-                    <li>Shedding: 5  <input type="checkbox"> </li>
-                    <li>Good with kids: 3  <input type="checkbox"> </li>
-                    <li>Cuddliness: 3  <input type="checkbox"> </li>
-                    <li>Temperament: 4  <input type="checkbox"> </li>
-                    <li>Time commitment: 4  <input type="checkbox"> </li>
-                    <li>Easy to train: 5  <input type="checkbox"> </li>
-                    <li>Size: 3  <input type="checkbox"> </li>
-                    <li>Health: 4  <input type="checkbox"> </li>                   
-                </ul>
-            </p1>
+            <h1>Select any traits that you dislike:</h1>
+            <form id="frm1">
+            <span id="info"></span>     
+            </form>  
         </div>
-        
+        <button type="button" class="button" onclick="javascript:selectInitialTraits();">Next</button>
     </body>
     
 </html>

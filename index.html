@@ -2,89 +2,12 @@
 <html>
 <head>
 	<title>Uadopt</title>
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<script>
-		function send() {
-		    var x = document.getElementById("frm1"); // x is the form
-		    var i;
-		    var queryString = ""; // string with information to be sent to the next page
-		    for (i = 0; i < x.length-2 ;i++)
-		    	if (x.elements[i].type != "radio" || x.elements[i].checked)
-		    		queryString += "?" + x.elements[i].name + ": " + x.elements[i].value + " "; // send name and value from form
-		    window.location.href = "responses.html" + queryString;
-		}
-	</script>
 </head>
 <body>
 	<center>
-		<h1 class="title">Uadopt<sup style="font-size: 16px;">BETA</sup></h1>
-		<div class="main">
-			<div class="column">
-	<form class="form" id="frm1">
-		Tell me a bit about yourself.<br><br>
-		<ol>
-		<li>What is your first name?</li><br>
-		<input type="text" name="name" required><br><br>
-		<li>What is your age?</li><br>
-		<input type="number" name="age"required><br><br>
-		<li>What is your marital status?</li><br>
-		<input type="radio" name="marital" value="single" required>Single or Unmarried<br>
-		<input type="radio" name="marital" value="married" required>Married<br><br>
-		<li>How large is your home?</li><br>
-		<input type="radio" name="home" value="small" required>Small<br>
-		<input type="radio" name="home" value="medium" required>Medium<br>
-		<input type="radio" name="home" value="large" required>Large<br><br>
-		<li>What is your backyard size?</li><br>
-		<input type="radio" name="backyard" value="no" required>None<br>
-		<input type="radio" name="backyard" value="small" required>Small<br>
-		<input type="radio" name="backyard" value="medium" required>Medium<br>
-		<input type="radio" name="backyard" value="large" required>Large<br><br>
-		<li>How many children do you have?</li><br>
-		<input type="number" name="children" required><br><br>
-		<li>What is your income status?</li><br>
-		<input type="radio" name="income" value="stable" required>Stable<br>
-		<input type="radio" name="income" value="unstable" required>Unstable<br><br>
-		<li>What is your activity level?</li><br>
-		Low <input type="range" name="activity" min="1" max="5" required> High<br><br>
-		<li>How much time (on average) would you have per day to spend time with your dog?</li><br>
-		Not Much <input type="range" name="time" min="1" max="5" required> A Lot<br><br>
-		<li>Do you have any past dog experience? If so, name your breed.</li><br>
-		<input list="breeds" name="experience" required>
-  		<datalist id="breeds">
-    		<option value="N/A">
-    		<option value="Golden Retriever">
-    		<option value="Poodle">
-    		<option value="Bulldog">
-    		<option value="Beagle">
-    		<option value="Chihuahua">
-    		<option value="Pug">
-    		<option value="Boxer">
-    		<option value="Goldendoodle">
-  		</datalist> <br><br>
-		<li>Rate the following traits according to your personal preference; the further to the right, the higher the importance:</li><br><br>
-		<input type="range" name="size" min="1" max="5" required> Big<br><br>
-		<input type="range" name="kids" min="1" max="5" required> Kid Friendly<br><br>
-		<input type="range" name="dogs" min="1" max="5" required> Dog Friendly<br><br>
-		<input type="range" name="shedding" min="1" max="5" required> Low Shedding<br><br>
-		<input type="range" name="groom" min="1" max="5" required> Easy to Groom<br><br>
-		<input type="range" name="energy" min="1" max="5" required> High Energy<br><br>
-		<input type="range" name="health" min="1" max="5" required> Good Health<br><br>
-		<input type="range" name="barking" min="1" max="5" required> Low Barking<br><br>
-		<input type="range" name="intelligence" min="1" max="5" required> High Intelligence<br><br>
-		<input type="range" name="training" min="1" max="5" required> Easy to Train<br><br>
-		<input type="range" name="hot" min="1" max="5" required> Tolerates Hot<br><br>
-		<input type="range" name="cold" min="1" max="5" required> Tolerates Cold<br><br>
-		<input type="submit" value="Submit">
-	</form>
-	<button type="button" onclick="send()">Response Summary</button>
-</div>
-	<div class="column">
-	<img src="http://www.dogingtonpost.com/wp-content/uploads/2017/05/NewlyAdopted-min.jpg" width=100%><br><br><br><br><br>
-	<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/150838553-tips-for-first-30-days-dog-632x475.jpg" width=100%><br><br><br><br><br>
-	<img src="http://cdn0.wideopenpets.com/wp-content/uploads/2016/11/dog-hybrid-animal-lying-162349-large.jpeg" width=100%><br><br><br><br><br>
-	</div>
-</div>
-
-</center>
+		<h1>Uadopt</h1>
+		<button type="button" class="button" onclick="location.href='user_info.html';">Get Started</button><br><br>
+		<button type="button" class="button" onclick="location.href='';">Sign In</button>
+	</center>
 </body>
 </html>
