@@ -1,23 +1,23 @@
 function search() {
-	  // Declare variables 
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myInput");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
+	// Declare variables 
+	var input, filter, table, tr, td, i;
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("myTable");
+	tr = table.getElementsByTagName("tr");
 
-	  // Loop through all table rows, and hide those who don't match the search query
-	  for (i = 0; i < tr.length; i++) {
+	// Loop through all table rows, and hide those who don't match the search query
+	for (i = 0; i < tr.length; i++) {
 	    td = tr[i].getElementsByTagName("td")[1]; // 1 is the 2nd column (change it to change what column is searched)
 	    if (td) {
-	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-	        tr[i].style.display = "";
-	      } else {
-	        tr[i].style.display = "none";
-	      }
+	      	if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	        	tr[i].style.display = "";
+	      	} else {
+	        	tr[i].style.display = "none";
+	      	}
 	    } 
-	  }
 	}
+}
 function send() {
     var queryString = ""; // string with information to be sent to the next page
     var x = document.getElementById("frm1"); // x is the form
@@ -101,35 +101,25 @@ function update() { // Updates the search on breed_search.html
     }
     document.getElementById("selected").innerHTML = selected;
 }
-function displayQuestionnaire() { // Generates html on preference_selection.html
+function displayQuestionnaire() { // Filters html on preference_selection.html
 	var queryString = decodeURIComponent(window.location.search);
 	var queries = queryString.split("?");
 
-	var questionnaire = "";
+	// Declare variables 
+	var form, sp, inp, i, j;
+	form = document.getElementById("frm1");
+	sp = form.getElementsByTagName("span");
 
-	for (var i=0; i<queries.length; i++) {
-		if (queries[i] == "energy") {
-			questionnaire += "<p>At its peak activity level, my dog should be able to... </p>" + 
-			  "<input type=\"radio\" name=\"energy\" value=\"5\"> Run and hike with me<br>" + 
-			  "<input type=\"radio\" name=\"energy\" value=\"4\"> Walk and play fetch<br>" +
-			  "<input type=\"radio\" name=\"energy\" value=\"3\"> Play occasional tug of war<br>" + 
-			  "<input type=\"radio\" name=\"energy\" value=\"2\"> Lay around for the most part, with the occoasional short walk<br>" +
-			  "<input type=\"radio\" name=\"energy\" value=\"1\"> Play on its own with minimal activity on my end<br><br>";
-		}
-		else if (queries[i] == "intelligence") {
-			questionnaire += "<p>What do you want your dog's intelligence level to be on a scale of 1 to 5, with 5 being most intelligent? </p>" +
-			  "<input type=\"radio\" name=\"Intelligence\" value=\"1\"> 1<br>" +
-			  "<input type=\"radio\" name=\"Intelligence\" value=\"2\"> 2<br>" +
-			  "<input type=\"radio\" name=\"Intelligence\" value=\"3\"> 3<br>" +
-			  "<input type=\"radio\" name=\"Intelligence\" value=\"4\"> 4<br>" +
-			  "<input type=\"radio\" name=\"Intelligence\" value=\"5\"> 5<br><br>";
-		}
-		else if (queries[i] == "barking") {
-			questionnaire += "<p>What do you want your dog's noise/barking level to be like?</p>" +
-		  "<input type=\"radio\" name=\"barking\" value=\"5\"> A guard dog with a strong bark<br>" +
-		  "<input type\"radio\" name=\"barking\" value=\"1\"> No barking<br>" +
-		  "<input type=\"radio\" name=\"barking\" value=\"3\"> No preference<br><br>";
-		}
-	}
-
+	// Loop through all questions, and hide those who don't match the question type
+	for (i = 0; i < sp.length; i++) {
+	    inp = sp[i].getElementsByTagName("input")[0];
+    	var included = false;
+    	for (j=0; j<queries.length && !included; j++) // Loop through every question category
+    		if (inp.name == queries[j]) {
+		        sp[i].style.display = "";
+		        included = true;
+		    }
+    	if (!included)
+    		sp[i].style.display = "none";
+	  }
 }
