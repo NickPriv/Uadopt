@@ -122,5 +122,4 @@ function displayQuestionnaire() { // Filters html on preference_selection.html
     	if (!included)
     		sp[i].style.display = "none";
 	  }
-	  form.style.display = ""; // Display the form
 }
