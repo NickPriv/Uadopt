@@ -119,5 +119,7 @@ function displayQuestionnaire() { // Filters html on preference_selection.html
 		        sp[i].style.display = "";
 		        included = true;
 		    }
-		}
+    	if (!included)
+    		sp[i].style.display = "none";
+	  }
 }
