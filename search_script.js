@@ -45,7 +45,7 @@ function selectInitialTraits() { // For NegativeTraitsSelection.html
 			selectedTraits.push(x.elements[i].name);
 		}
 	}
-	window.location.href = "MostImportantTraitsSelection.html" + queryString;
+	window.location.href = "preference_selection.html" + queryString;
 }
 function selectAdditionalTraits() { // For MostImportantTraitsSelection.html
 	var queryString = decodeURIComponent(window.location.search);
