@@ -92,14 +92,11 @@ function displaySelectedBreeds() { // For NegativeTraitsSelection.html
         document.getElementById("info").innerHTML = breedTraits;
 	}
 }
-function update() { // Updates the search on breed_search.html
-	var selected = "Selected: ";
-	var x = document.getElementById("frm1"); // x is the form
-    for (var i = 0; i < x.length; i++) {
-    	if (x.elements[i].type == "checkbox" && x.elements[i].checked)
-    		selected += x.elements[i].value + " "; // send name and value from form
-    }
-    document.getElementById("selected").innerHTML = selected;
+function updateCheckboxes(value) {
+	var x = document.getElementById("frm1");
+	for (var i=0; i<x.length; i++)
+		if (x.elements[i].type == "checkbox" && x.elements[i].checked && x.elements[i].value != value)
+			x.elements[i].checked = false;
 }
 function displayQuestionnaire() { // Filters html on preference_selection.html
 	var queryString = decodeURIComponent(window.location.search);

@@ -6,7 +6,6 @@
 	<script src="./search_script.js"></script>
 </head>
 <body>
-	<h1> Please select the breed you have in mind: </h1>
 	<div id="search bar">
 	<input type="text" id="myInput" onkeyup="search()" placeholder="Search for breeds...">
 	<span id="selected"></span>
@@ -21,29 +20,29 @@
 	  <tr>
 	    <td><img src="http://www.dogbreedchart.com/img/beagle.jpg"></td>
 	    <td>Beagle</td>
-	    <td><input type="checkbox" name="breed1" value="Beagle" class="mycheckbox" onclick="update()"></td>
+	    <td><input type="checkbox" name="breed1" value="Beagle" class="mycheckbox" onclick="updateCheckboxes('Beagle');"></td>
 	    <span class="checkmark"></span>
 	  </tr>
 	  <tr>
 	    <td><img src="http://www.dogbreedchart.com/img/chihuahua.jpg"></td>
 	    <td>Chihuahua</td>
-	    <td><input type="checkbox" name="breed2" value="Chihuahua" class="mycheckbox" onclick="update()"></td>
+	    <td><input type="checkbox" name="breed2" value="Chihuahua" class="mycheckbox" onclick="updateCheckboxes('Chihuahua');"></td>
 	  </tr>
 	  <tr>
 	    <td><img src="http://www.dogbreedchart.com/img/golden-retriever.jpg"></td>
 	    <td>Golden Retriever</td>
-	    <td><input type="checkbox" name="breed3" value="Golden Retriever" class="mycheckbox" onclick="update()"></td>
+	    <td><input type="checkbox" name="breed3" value="Golden Retriever" class="mycheckbox" onclick="updateCheckboxes('Golden Retriever');"></td>
 	  </tr>
 	  <tr>
 	    <td><img src="http://www.dogbreedchart.com/img/pug.jpg"></td>
 	    <td>Pug</td>
-	    <td><input type="checkbox" name="breed4" value="Pug" class="mycheckbox" onclick="update()"></td>
+	    <td><input type="checkbox" name="breed4" value="Pug" class="mycheckbox" onclick="updateCheckboxes('Pug');"></td>
 	  </tr>
 	</table>
 	</form>
 </div>
 <div class="continue">
-	<button type="button" class="button" onclick="send()">Continue</button> <!--todo: move button to bottom of screen-->
-</div> <!--todo: we should add an option "Breed is not listed"-->
+	<button type="button" class="button" onclick="send()">Continue</button>
+</div>
 </body>
 </html>
