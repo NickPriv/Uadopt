@@ -28,22 +28,34 @@
                 exit;
         }
         echo "not failed";
-        return $conn;
+        //return $conn;
         echo "here";
         //this is the sql line that takes all the data from the pet table in the 
         //database 
         // breed and description are the column names for each row in the pet table 
-        $sql = "SELECT breed, description from Pet";
+        $sql = "SELECT breed, description FROM pet";
         $result = $conn-> query($sql);
-        if ($result -> num_rows>0){
-        	while ($row = $result -> fetch_assoc()){
-        		echo $row["breed"];
-            }
-        	echo "</table>";
-        } 
-        else{
-        	echo "0 results";
-        }
+	
+        //if ($result -> num_rows>0){
+        	//while ($row = $result -> fetch_assoc()){
+        	//	echo $row["breed"]. "<br>";
+           // }
+        	//echo "</table>";
+       // } 
+       // else{
+        	//echo "0 results";
+        //}
+	if ($result->num_rows > 0) {
+   		echo "<table><tr><th>Breed</th></tr>";
+    		// output data of each row
+    		while($row = $result->fetch_assoc()) {
+        		echo "<tr><td>".$row["breed"]."</td></tr>";
+    		}
+    		echo "</table>";
+	} 
+	else {
+    		echo "0 results";
+	}
 
         $conn -> close();
 	  ?>
