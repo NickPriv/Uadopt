@@ -6,7 +6,7 @@
 </head>
 <body>
 	<p>User ID #: <span id="id_num">000</span></p>
-<form class="form" id="frm1" method = "post" action = "https://uadopt.netlify.com/breed_search.php">
+<form class="form" id="frm1" method = "post" action = "breed_search.php">
 		<ol>
 		<li>What is your first name?</li><br>
 		<input type="text" name="name" required><br><br>
@@ -34,7 +34,6 @@
 		<li>How much time (on average) would you have per day to spend time with your dog?</li><br>
 		Not Much <input type="range" name="time" min="1" max="5" required> A Lot<br><br>
 		<li>Do you have any past dog experience? If so, name your breed.</li><br>
-		<li>Do you have a specific dog breed that you are already interested</li><br>
 		<input list="breeds" name="experience" required>
   		<datalist id="breeds">
     		<option value="N/A">
@@ -47,6 +46,7 @@
     		<option value="Boxer">
     		<option value="Goldendoodle">
   		</datalist>
+		<li>Do you have a specific dog breed that you are already interested</li><br>
   	</form>
   	<!--<input type="submit" value="Submit">-->
   	<button type="submit" class="button">Yes</button>
