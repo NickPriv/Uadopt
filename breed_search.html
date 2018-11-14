@@ -18,7 +18,7 @@
 	    <th style="width:40%;"></th>
 	  </tr>-->
 	  <!-- this is the part of the code that will run php to connect to database-->
-	  <?php
+<?php
       echo "data inserted";
 	   $cfg = parse_ini_file('setup.ini');
        $conn = oci_connect($cfg['db_user'], $cfg['db_pass'],$cfg['db_path']);
@@ -27,8 +27,30 @@
                 exit;
         }
         echo "not failed";
+
+//OLD CODE BLOCK
+
+	return $conn;
         echo "here";
-	<p> 
+        $sql = "SELECT breed, photo from dogTest";
+        $result = $conn-> query($sql);
+        if ($result -> num_rows>0){
+        	while ($row = $result -> fetch_assoc()){
+        		echo $row["breed"];
+            }
+        	echo "</table>";
+        } 
+        else{
+        	echo "0 results";
+        }
+
+        $conn -> close();
+
+//END OLD CODE BLOCK
+
+
+//NEW CODE
+	echo "here";
         //this is the sql line that takes all the data from the pet table in the 
         //database 
         // breed and description are the column names for each row in the pet table 
@@ -48,8 +70,7 @@
     		echo "0 results";
 	}
         $conn -> close();
-
-	  ?>
+?>
 	  <tr>
 	    <td><img src="http://www.dogbreedchart.com/img/beagle.jpg"></td>
 	    <td>Beagle</td>
