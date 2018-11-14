@@ -7,7 +7,7 @@
 <h2>Please select your preferences for the breed traits below:</h2>
 <h3>Note: Any unanswered questions will be marked as 'no preference'.</h3>
 
-  <form id="frm1" action="action_page.php" target="dummyframe">
+  <form id="frm1" action="http:students.engr.scu.edu/~stointon/test/insertuserdata.php" target="dummyframe">
 
 <span class="question">
 <p>What do you want your dog's noise/barking level to be like?</p>
@@ -94,5 +94,13 @@
 
   <input type="button" value="Submit" onclick='document.forms["frm1"].submit()'>
   </form> 
+  
+  $('#submit').click(function() {
+    $.ajax ({
+        url: 'http:students.engr.scu.edu/~stointon/test/insertuserdata.php'
+        type: 'POST'
+    });
+  });
+  
 <iframe width="0" height="0" border="0" style="border-color: white" name="dummyframe" id="dummyframe"></iframe>
 </body>
