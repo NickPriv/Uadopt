@@ -8,10 +8,11 @@ CREATE TABLE Adopter
 	userID VARCHAR(5) Primary key,
 	name VARCHAR(35),
 	age Integer, 
-	maritalSatus VARCHAR(20),
+	maritalSatus Integer,
+	home Integer,
+	yard Integer,
 	numberOfKids Integer,
-	kindsUnderTen VARCHAR(20), 
-	yard VARCHAR(10),
+	incomeStatus Integer,
 	activityLevelUser Integer,
 	freetime Integer,
 	prirorKnowlege Integer,
@@ -55,10 +56,27 @@ CREATE TABLE Match
 	Foreign Key(petID) REFERENCES Pet(petID)
 );
 
-INSERT INTO Pet values (1, 'Australian Shepherd', 4, 5, 5, 3, 4, 5, 4, 4, 5, 2, 3, 'Australian Shepherds very energetic dogs. They are quite variable in temperament, but these intelligent dogs can be a fun and exciting addition to your household. Their energy is charming, but they do require a substantial amount of physical activity and mental stimulation, making them a better fit for a more active household willing to make the time commitment.');
+INSERT INTO Pet values (1, 'Australian Shepherd', 4, 5, 5, 3, 4, 5, 4, 4, 5, 2, 3,
+ 'Australian Shepherds very energetic dogs. They are quite variable in temperament, 
+ but these intelligent dogs can be a fun and exciting addition to your household. 
+ Their energy is charming, but they do require a substantial amount of physical activity 
+ and mental stimulation, making them a better fit for a more active household willing 
+ to make the time commitment.');
 
 
 
 
-INSERT INTO Pet values (2, 'Beagle', 5, 4, 4, 3, 5, 4, 5, 2, 1, 1, 2, 'Beagles are active, playful and friendly dogs. They are great with kids and a convenient small size. But, don’t let their smaller size fool you, beagles still require a moderate amount of exercise or an open yard to run around in. Beagles can be hard to train, so you must be diligent in training when they are puppies.');
+INSERT INTO Pet values (2, 'Beagle', 5, 4, 4, 3, 5, 4, 5, 2, 1, 1, 2, 
+	'Beagles are active, playful and friendly dogs. They are great with kids and a 
+	convenient small size. But, don’t let their smaller size fool you, beagles still 
+	equire a moderate amount of exercise or an open yard to run around in. Beagles can 
+	be hard to train, so you must be diligent in training when they are puppies.');
+
+INSERT INTO Adopter values ('1', 'steve', 22, 1, 2, 2, 5, 2, 5, 5, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+
+
+
+
+
 
