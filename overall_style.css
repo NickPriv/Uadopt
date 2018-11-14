@@ -7,6 +7,12 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    color: red;
+    text-alight: right;
+    text-decoration: overline;
+}
+
 p {
     color: whilte;
     font-family: comic sans;
