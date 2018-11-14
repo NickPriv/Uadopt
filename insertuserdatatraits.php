@@ -5,7 +5,7 @@
 //connects to the database
 //uses the setup.ini file so it will hide my username and password when putting code onto github
 
-echo "does it get to this page or nah";
+echo "does it get to this page after the presference selection";
 connectToDB();
 enterUser();
 
