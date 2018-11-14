@@ -19,7 +19,8 @@
 	  </tr>-->
 	  <!-- this is the part of the code that will run php to connect to database-->
 	  <?php
-      echo "data inserted";
+	   // connects to the database with password and username from the setup.ini 
+	  //file 
 	   $cfg = parse_ini_file('setup.ini');
        $conn = oci_connect($cfg['db_user'], $cfg['db_pass'],$cfg['db_path']);
        if(!$conn){
@@ -29,7 +30,10 @@
         echo "not failed";
         return $conn;
         echo "here";
-        $sql = "SELECT breed, photo from dogTest";
+        //this is the sql line that takes all the data from the pet table in the 
+        //database 
+        // breed and description are the column names for each row in the pet table 
+        $sql = "SELECT breed, description from Pet";
         $result = $conn-> query($sql);
         if ($result -> num_rows>0){
         	while ($row = $result -> fetch_assoc()){
