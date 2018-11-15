@@ -1,0 +1,68 @@
+<head>
+<style>
+div.title {
+    padding-top: 30px;
+}
+div.calculate {
+    align-items: center;
+    text-align: center;
+    padding: 24px 56px;
+}
+.button1 {
+	text-align: center;
+    padding: 25px 50px;
+    font-size: 24px;
+    border-radius: 12px;
+}
+.button2 {
+	text-align: center;
+    padding: 25px 50px;
+    font-size: 24px;
+    border-radius: 12px;
+    display: none;
+}
+img {
+    border-radius: 8px;
+    display: none;
+}
+body {
+    background-color: lightblue;
+}
+</style>
+</head>
+<body>
+	<div class="title">
+	<h1 style="text-align:center">Find your most compatible breeds:</h1>
+	</div>
+
+	<div class= "calculate">
+	<button class="button button1" <input type="button" id: ="button1" onclick="displayButton2() "> Calculate! </button>
+	</div>
+
+	<div class= "calculate">
+	<button class="button button2" <input type="button" id: ="button2" onclick="displayTimer()"> Calculating... </button>
+	</div>
+
+	<img src="phttps://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="loading" width="300" height="300">
+
+</body>
+
+
+<script type="text/javascript">
+
+function displayButton2(){
+	button1.style.display= none;
+	button2.style.display= "";	
+	img.style.display= "";
+	setTimeout(nextPage, 2000);
+}
+
+function nextPage() {
+	window.location.href = "topTenBreeds.html";
+}	
+
+</script>
+
+
+
+
