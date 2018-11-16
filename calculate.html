@@ -21,15 +21,16 @@ div.calculate {
     	padding: 25px 50px;
     	font-size: 24px;
     	border-radius: 12px;
-    	display: none;
+    	visibility: hidden;
 }
 img {
     	border-radius: 8px;
-	display: none;
+	display: block;
    	margin-left: auto;
     	margin-right: auto;
 	width: 75px;
 	height: 75px;
+	opacity: 0.0;
 }
 </style>
 </head>
@@ -42,10 +43,6 @@ img {
 	<button class="button button1" input type="button" onclick="displayButton2() "> Calculate! </button>
 	</div>
 
-	<div class= "calculate">
-	<button class="button button2" input type="button"> Calculating... </button>
-	</div>
-
 	<img src="https://apptractor.ru/wp-content/uploads/2017/04/spinner-icon-0.gif">
 </body>
 </html>
@@ -54,8 +51,7 @@ img {
 
 function displayButton2(){
 	button1.style.display= none;
-	button2.style.display= "block";	
-	img.style.display= "block";
+	img.opacity= 1.0;
 	setTimeout(nextPage, 2000);
 }
 
