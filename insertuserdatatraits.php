@@ -4,7 +4,7 @@
 
 //connects to the database
 //uses the setup.ini file so it will hide my username and password when putting code onto github
-header("Location: https://uadopt.netlify.com/breed_search.html");
+//header("Location: https://uadopt.netlify.com/preference_selection.html");
 
 echo "does it get to this page after the presference selection";
 echo "this should come up";
