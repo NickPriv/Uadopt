@@ -43,14 +43,15 @@ img {
 	<button class="button button1" input type="button" onclick="displayButton2() "> Calculate! </button>
 	</div>
 
-	<img src="https://apptractor.ru/wp-content/uploads/2017/04/spinner-icon-0.gif">
+	<img src="https://apptractor.ru/wp-content/uploads/2017/04/spinner-icon-0.gif" id= "load">
 </body>
 </html>
 
 <script type="text/javascript">
 
 function displayButton2(){
-	img.opacity= 1.0;
+	var element = document.getElementById('load');
+	element.style.opacity = "0.9";
 	setTimeout(nextPage, 2000);
 }
 
