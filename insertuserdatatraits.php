@@ -4,6 +4,7 @@
 
 //connects to the database
 //uses the setup.ini file so it will hide my username and password when putting code onto github
+//header("Location: https://uadopt.netlify.com/preference_selection.html");
 
 echo "does it get to this page after the presference selection";
 echo "this should come up";
@@ -50,7 +51,37 @@ function enterUser(){
      // intelligence, sheddding, kids, cuddle, temperament, time, training, health,
     //size
 	 // the varable name is single quotes must match the name from the html file 
-        echo "<p>this is right before the array </p>";
+    echo "<p>before the if loop</p>";
+    //$variableFromHtml = array("barking", "energy", "intelligence", "sheddding", "kids", "cuddle", "temperament", "time", "training", "health", "size");
+    //print_r($_POST[$variableFromHtml]);
+    if (!isset($_POST['barking']))
+        {
+        $barking = 3;
+        } 
+    else
+        {
+        $barking = $_POST['barking'];
+        }
+    if (!isset($_POST['energy']))
+        {
+        $energy = 3;
+        } 
+    else
+        {
+        $energy = $_POST['energy'];
+        }
+    if (!isset($_POST['energy']))
+        {
+        $energy = 3;
+        } 
+    else
+        {
+        $energy = $_POST['energy'];
+        }
+    print_r($barking);
+    print_r($energy);
+
+    echo "after the if loop";
      $userInfo = array(
      			$barking = $_POST['barking'],
      			$energy = $_POST['energy'],

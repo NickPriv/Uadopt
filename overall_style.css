@@ -1,20 +1,26 @@
 body {
-    background-color: lightblue;
+    background-color: powderblue;
 }
 
 h1 {
-    color: blue;
+    color: #404040;
     text-align: center;
+    font-family: veranda;
 }
 
 h2 {
-    color: red;
+    color: #404040;
     text-alight: right;
     text-decoration: overline;
+    font-family: veranda;
 }
 
 p {
-    color: blue;
+    color: #404040;
     font-family: veranda;
     font-size: 20px;
+}
+.button {
+    color: #404040;
+    font-family: veranda;
 }

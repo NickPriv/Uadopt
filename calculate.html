@@ -1,0 +1,66 @@
+<html>
+<head>
+	<link href="overall_style.css" rel="stylesheet" type="text/css">
+<style>
+div.title {
+    	padding-top: 30px;
+}
+div.calculate {
+   	align-items: center;
+   	text-align: center;
+    	padding: 24px 56px;
+}
+.button1 {
+	text-align: center;
+    	padding: 25px 50px;
+    	font-size: 24px;
+    	border-radius: 12px;
+}
+.button2 {
+	text-align: center;
+    	padding: 25px 50px;
+    	font-size: 24px;
+    	border-radius: 12px;
+    	visibility: hidden;
+}
+img {
+    	border-radius: 8px;
+	display: block;
+   	margin-left: auto;
+    	margin-right: auto;
+	width: 75px;
+	height: 75px;
+	opacity: 0.0;
+}
+</style>
+</head>
+<body>
+	<div class="title">
+	<h1 style="text-align:center">Find your most compatible breeds:</h1>
+	</div>
+
+	<div class= "calculate">
+	<button class="button button1" input type="button" onclick="displayButton2() "> Calculate! </button>
+	</div>
+
+	<img src="https://apptractor.ru/wp-content/uploads/2017/04/spinner-icon-0.gif" id= "load">
+</body>
+</html>
+
+<script type="text/javascript">
+
+function displayButton2(){
+	var element = document.getElementById('load');
+	element.style.opacity = "0.9";
+	setTimeout(nextPage, 1500);
+}
+
+function nextPage() {
+	window.location.href = "https://uadopt.netlify.com/top_ten_breeds.html";
+}	
+
+</script>
+
+
+
+
