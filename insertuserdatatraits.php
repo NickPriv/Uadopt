@@ -143,29 +143,23 @@ function enterUser(){
         $size= $_POST['size'];
         }
 
-
-
-
-
-
-
     print_r($barking);
     print_r($energy);
     print_r($size);
 
     echo "after the if loop";
      $userInfo = array(
-     			$barking = $_POST['barking'],
-     			$energy = $_POST['energy'],
-     			$intelligence = $_POST['intelligence'],
-                $shedding = $_POST['shedding'],
-                $kids = $_POST['kids'],
-                $cuddle = $_POST['cuddle'],
-                $temperament = $_POST['temperament'],
-                $timeForDog = $_POST['time'],
-                $training = $_POST['training'],
-                $health = $_POST['health'],
-                $size = $_POST['size']);
+     			$barking,
+     			$energy,
+     			$intelligence,
+                $shedding,
+                $kids,
+                $cuddle,
+                $temperament,
+                $time,
+                $training,
+                $health,
+                $size);
      echo "<p>this after the array part</p>";
      if(checkEmpty($userInfo)){
      	foreach ($userInfo as $attribute) {
@@ -184,7 +178,7 @@ function insertToDB($userInfo){
 	$conn = connectToDB();
     echo "got into the insertto db";
     //sql statement that will read into the database
-	$sqlStatement = oci_parse($conn, "INSERT INTO Adopter Values(100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, :barking, :energy, :intelligence, :sheddding, :kids, :cuddle, :temperament, :timeForDog, :training, :health, :size) ");
+	$sqlStatement = oci_parse($conn, "INSERT INTO Adopter Values(100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, :barking, :energy, :intelligence, :shedding, :kids, :cuddle, :temperament, :timeForDog, :training, :health, :b_size) ");
     /*binding each variable to the sql statement above with the php variable in the user info array */
     /*barking, energy, intelligence, sheddding, kids, cuddle, temperament, time, training, health, size are temp variables that must match with what is in the  sql statement above */
     oci_bind_by_name($sqlStatement, ':barking', $userInfo[0]);
@@ -197,7 +191,7 @@ function insertToDB($userInfo){
     oci_bind_by_name($sqlStatement, ':timeForDog', $userInfo[7]);
     oci_bind_by_name($sqlStatement, ':training', $userInfo[8]);
     oci_bind_by_name($sqlStatement, ':health', $userInfo[9]);
-    oci_bind_by_name($sqlStatement, ':size', $userInfo[10]);
+    oci_bind_by_name($sqlStatement, ':b_size', $userInfo[10]);
 
 	$res = oci_execute($sqlStatement);
     if ($res)
