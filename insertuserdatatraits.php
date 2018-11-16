@@ -70,16 +70,88 @@ function enterUser(){
         {
         $energy = $_POST['energy'];
         }
-    if (!isset($_POST['energy']))
+    if (!isset($_POST['intelligence']))
         {
-        $energy = 3;
+        $intelligence = 3;
         } 
     else
         {
-        $energy = $_POST['energy'];
+        $intelligence= $_POST['intelligence'];
         }
+    if (!isset($_POST['shedding']))
+        {
+        $shedding = 3;
+        } 
+    else
+        {
+        $shedding= $_POST['shedding'];
+        }
+    if (!isset($_POST['kids']))
+        {
+        $kids = 3;
+        } 
+    else
+        {
+        $kids= $_POST['kids'];
+        }
+    if (!isset($_POST['cuddle']))
+        {
+        $cuddle = 3;
+        } 
+    else
+        {
+        $cuddle= $_POST['cuddle'];
+        }
+    if (!isset($_POST['temperament']))
+        {
+        $temperament = 3;
+        } 
+    else
+        {
+        $temperament= $_POST['temperament'];
+        }
+    if (!isset($_POST['time']))
+        {
+        $time = 3;
+        } 
+    else
+        {
+        $time= $_POST['time'];
+        }
+    if (!isset($_POST['training']))
+        {
+        $training = 3;
+        } 
+    else
+        {
+        $training= $_POST['training'];
+        }
+    if (!isset($_POST['health']))
+        {
+        $health = 3;
+        } 
+    else
+        {
+        $health= $_POST['health'];
+        }
+    if (!isset($_POST['size']))
+        {
+        $size = 3;
+        } 
+    else
+        {
+        $size= $_POST['size'];
+        }
+
+
+
+
+
+
+
     print_r($barking);
     print_r($energy);
+    print_r($size);
 
     echo "after the if loop";
      $userInfo = array(
