@@ -179,6 +179,7 @@ function insertToDB($userInfo){
     echo "got into the insertto db";
     //sql statement that will read into the database
 	$sqlStatement = oci_parse($conn, "INSERT INTO Adopter Values(100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, :barking, :energy, :intelligence, :shedding, :kids, :cuddle, :temperament, :timeForDog, :training, :health, :b_size) ");
+	$sqlStatement = oci_parse($conn, "INSERT INTO Adopter Values(sequence_1.nextval, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, :barking, :energy, :intelligence, :shedding, :kids, :cuddle, :temperament, :timeForDog, :training, :health, :b_size) ");
     /*binding each variable to the sql statement above with the php variable in the user info array */
     /*barking, energy, intelligence, sheddding, kids, cuddle, temperament, time, training, health, size are temp variables that must match with what is in the  sql statement above */
     oci_bind_by_name($sqlStatement, ':barking', $userInfo[0]);
