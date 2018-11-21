@@ -16,9 +16,10 @@ h2 {
 
 p {
     color: #404040;
-    font-family: veranda;
+    font-family: arial;
     font-size: 20px;
     border: solid 1px;
+    border-color: LightSeaGreen;
 }
 .button {
     color: #404040;
