@@ -8,7 +8,7 @@
 
 connectToDB();
 enterUser();
-header('Location: https://uadopt.netlify.com/calculate.html');
+//header('Location: https://uadopt.netlify.com/calculate.html');
 
 
 function connectToDB(){
@@ -166,7 +166,7 @@ function insertToDB($userInfo){
 	$sqlStatement = oci_parse($conn, "UPDATE Adopter 
             SET noise = :barking,
                 activityLevelDog = :energy,
-                intellegence = :intellegence,
+                intelligence = :intelligence,
                 hairShedding = :shedding,
                 goodWithKids = :kids,
                 cuddly = :cuddle,
@@ -174,8 +174,8 @@ function insertToDB($userInfo){
                 timeCommitment = :timeForDog,
                 easeToTrain = :training,
                 heath = :health,
-                userSize = b_size
-            WHERE userID = (SELECT MAX(userID) from Adopter);
+                userSize = :b_size
+            WHERE userID = (SELECT MAX(userID) from Adopter)
         ");
     /*binding each variable to the sql statement above with the php variable in the user info array */
     /*barking, energy, intelligence, sheddding, kids, cuddle, temperament, time, training, health, size are temp variables that must match with what is in the  sql statement above */
