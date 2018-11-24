@@ -6,8 +6,8 @@ pagedirection();
 function pagedirection()
 {
 
-
-if ($SERVER['REQUEST_METHOD'] === 'POST')
+print_r($_SERVER['REQUEST_METHOD']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
 
 	//goes to breed search 
