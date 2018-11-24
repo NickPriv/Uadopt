@@ -5,7 +5,6 @@
 	<link href="overall_style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<p>User ID #: <span id="id_num">000</span></p>
 		<ol>
 		<li>What is your first name?</li><br>
 		<input type="text" name="name" required><br><br>
@@ -33,33 +32,11 @@
 		<li>How much time (on average) would you have per day to spend time with your dog?</li><br>
 		Not Much <input type="range" name="time" min="1" max="5" required> A Lot<br><br>
 		<li>Do you have any past dog experience? If so, name your breed.</li><br>
-		<input list="breeds" name="experience" required>
-  		<datalist id="breeds">
-    		<option value="N/A">
-    		<option value="Golden Retriever">
-    		<option value="Poodle">
-    		<option value="Bulldog">
-    		<option value="Beagle">
-    		<option value="Chihuahua">
-    		<option value="Pug">
-    		<option value="Boxer">
-    		<option value="Goldendoodle">
-  		</datalist>
+		<input type="radio" name="experience" value="yes" required>Yes<br>
+		<input type="radio" name="experience" value="no" required>No<br><br>
 		<li>Do you have a specific dog breed that you are already interested</li><br>
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<form id="frm1" action = "http:students.engr.scu.edu/~stointon/Uadopt/breed_search.php" target= "_self">
-		<input type="submit" value= "Yes"</button>
-=======
-	<form id="frm1" action = "http:students.engr.scu.edu/~stointon/test/insertuserdata.php" target= "_self">
-		<input type="submit" value= "Yes">
->>>>>>> 59abfd423b0467f3e06178c4a478ce2b3dff81b4
-=======
-	<form id="frm1" action = "http:students.engr.scu.edu/~stointon/test/insertuserdata.php" target= "_self">
-		<input type="submit" value= "Yes">
->>>>>>> 59abfd423b0467f3e06178c4a478ce2b3dff81b4
-  	</form>
-  	<!--<input type="submit" value="Submit">-->
-  	<a href="most_important_traits_selection.html"><button type="button" class="button">No</button></a>
+	<form id="frm1" action = "http:students.engr.scu.edu/~stointon/Uadopt/insertdata.php" target= "_self">
+		<input type="submit" name="Yesbutton" value= "Yes" />
+		<input type="submit" name="Nobutton" value= "No"/>
 </body>
 </html>

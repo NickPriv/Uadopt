@@ -1,0 +1,31 @@
+<?php
+
+pagedirection();
+
+
+function pagedirection()
+{
+
+
+if ($SERVER['REQUEST_METHOD'] === 'POST')
+{
+
+	//goes to breed search 
+	if(isset($POST['Yesbutton']))
+	{
+		header('Location: https://uadopt.netlify.com/breed_search.html');
+	}
+	//goes to most important traits selection
+	else 
+	{
+		header('Location: https://uadopt.netlify.com/most_important_traits_selection.html');
+	}
+}
+
+
+
+}
+
+
+
+?>
