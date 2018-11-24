@@ -3,10 +3,10 @@
 
 connectToDB();
 enterUser();
-//pagedirection();
+pagedirection();
 
 
-/*function pagedirection()
+function pagedirection()
 {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
@@ -26,9 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 }
 
 
-
 }
-*/
 
 
 function connectToDB(){
@@ -45,7 +43,7 @@ function connectToDB(){
 function checkEmpty($array)
 {
 	foreach ($array as $value) {
-		if(empty($value)){
+		if($value == NULL){
 			return false;
 		}
 	}
@@ -64,6 +62,28 @@ function enterUser(){
      // collect input data of the 11 characteristics of personal information
 	 // the varable name is single quotes must match the name from the html file 
     
+	print_r($_POST['name']);
+	echo '<br/>';
+    print_r($_POST['age']);
+    echo '<br/>';
+    print_r($_POST['marital']);
+    echo '<br/>';
+    print_r($_POST['home']);
+    echo '<br/>';
+    print_r($_POST['backyard']);
+    echo '<br/>';
+    print_r($_POST['children']);
+    echo '<br/>';
+    print_r($_POST['income']);
+    echo '<br/>';
+    print_r($_POST['activity']);
+    echo '<br/>';
+    print_r($_POST['time']);
+    echo '<br/>';
+    print_r($_POST['experience']);
+    echo '<br/>';
+    
+
      $userInfo = array(
      			$name = $_POST['name'],
      			$age = $_POST['age'],
@@ -72,9 +92,10 @@ function enterUser(){
      			$backyard = $_POST['backyard'],
      			$children = $_POST['children'],
      			$income = $_POST['income'],
-     			$activity = $_POST['acivity'],
+     			$activity = $_POST['activity'],
      			$timeToSpend = $_POST['time'],
      			$experience = $_POST['experience']);
+
      if(checkEmpty($userInfo)){
      	foreach ($userInfo as $attribute) {
      		prepareInput($attribute);
@@ -90,7 +111,7 @@ function enterUser(){
 function insertToDB($userInfo){
 	$conn = connectToDB();
     //sql statement that will read into the database
-	$sqlStatement = oci_parse($conn, "INSERT INTO Adopter Values(sequence_1.nextval, :name, :age, :marital, :home, :backyard, :children, :income, :activity, :timeToSpend, :experience, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL ");
+	$sqlStatement = oci_parse($conn, "INSERT INTO Adopter Values(sequence_1.nextval, :name, :age, :marital, :home, :backyard, :children, :income, :activity, :timeToSpend, :experience, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) ");
     /*binding each variable to the sql statement above with the php variable in the user info array */
     oci_bind_by_name($sqlStatement, ':name', $userInfo[0]);
     oci_bind_by_name($sqlStatement, ':age', $userInfo[1]);
@@ -113,10 +134,5 @@ function insertToDB($userInfo){
 	oci_free_statement($sqlStatement);
 	oci_close($conn);
 }
-
-?>
-
-
-
 
 ?>
