@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Search Breeds</title>
-	<link rel="stylesheet" type="text/css" href="search_style.css">
+	<link href="overall_style.css" rel="stylesheet" type="text/css">
 	<script src="./search_script.js"></script>
 </head>
 <body>
@@ -12,73 +12,35 @@
 	<div class="search_table">
 	<form id="frm1">
 	<table id="myTable">
-	  <!--<tr class="header">
-	    <th style="width:60%;"></th>
-	    <th style="width:40%;"></th>
-	  </tr>-->
-	  <!-- this is the part of the code that will run php to connect to database-->
-	  <?php
-	   // connects to the database with password and username from the setup.ini 
-	  //file 
-	   $cfg = parse_ini_file('setup.ini');
-       $conn = oci_connect($cfg['db_user'], $cfg['db_pass'],$cfg['db_path']);
-       if(!$conn){
-                echo "connection failed:";
-                exit;
-        }
-        echo "not failed";
-        //return $conn;
-        echo "here";
-        //this is the sql line that takes all the data from the pet table in the 
-        //database 
-        // breed and description are the column names for each row in the pet table 
-        $sql = "SELECT breed, description FROM pet";
-        $result = $conn-> query($sql);
-	
-        //if ($result -> num_rows>0){
-        	//while ($row = $result -> fetch_assoc()){
-        	//	echo $row["breed"]. "<br>";
-           // }
-        	//echo "</table>";
-       // } 
-       // else{
-        	//echo "0 results";
-        //}
-	if ($result->num_rows > 0) {
-   		echo "<table><tr><th>Breed</th></tr>";
-    		// output data of each row
-    		while($row = $result->fetch_assoc()) {
-        		echo "<tr><td>".$row["breed"]."</td></tr>";
-    		}
-    		echo "</table>";
-	} 
-	else {
-    		echo "0 results";
-	}
 
-        $conn -> close();
+	<?php
+
+	  $cfg = parse_ini_file('setup.ini');
+            $conn = oci_connect($cfg['db_user'], $cfg['db_pass'],$cfg['db_path']);
+            if(!$conn){
+                echo "<br> connection failed:";
+                exit;
+            }
+            $sql = oci_parse($conn, "SELECT photo, breed FROM pet");
+            $res = oci_execute($sql);
+
+
+            if(!$res ) {
+            die('Could not get data: ');
+            }        
+
+            
+            while(($row = oci_fetch_array($sql, OCI_BOTH)) != false){
+                echo "<tr>
+                    <td><img src=". $row[0] . "></td>
+                    <td>". $row[1] . "</td>
+                    <td><input type='checkbox' name='". $row[1] ."' value='". $row[1] ."' class='mycheckbox' onclick='updateCheckboxes('". $row[1] ."');'></td>
+                    <span class='checkmark'></span>
+                     </tr>";
+            }
+
 	  ?>
-	  <tr>
-	    <td><img src="http://www.dogbreedchart.com/img/beagle.jpg"></td>
-	    <td>Beagle</td>
-	    <td><input type="checkbox" name="breed1" value="Beagle" class="mycheckbox" onclick="updateCheckboxes('Beagle');"></td>
-	    <span class="checkmark"></span>
-	  </tr>
-	  <tr>
-	    <td><img src="http://www.dogbreedchart.com/img/chihuahua.jpg"></td>
-	    <td>Chihuahua</td>
-	    <td><input type="checkbox" name="breed2" value="Chihuahua" class="mycheckbox" onclick="updateCheckboxes('Chihuahua');"></td>
-	  </tr>
-	  <tr>
-	    <td><img src="http://www.dogbreedchart.com/img/golden-retriever.jpg"></td>
-	    <td>Golden Retriever</td>
-	    <td><input type="checkbox" name="breed3" value="Golden Retriever" class="mycheckbox" onclick="updateCheckboxes('Golden Retriever');"></td>
-	  </tr>
-	  <tr>
-	    <td><img src="http://www.dogbreedchart.com/img/pug.jpg"></td>
-	    <td>Pug</td>
-	    <td><input type="checkbox" name="breed4" value="Pug" class="mycheckbox" onclick="updateCheckboxes('Pug');"></td>
-	  </tr>
+
 	</table>
 	</form>
 </div>

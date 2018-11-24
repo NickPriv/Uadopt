@@ -8,7 +8,7 @@
 
 connectToDB();
 enterUser();
-//header('Location: https://uadopt.netlify.com/calculate.html');
+header('Location: https://uadopt.netlify.com/calculate.html');
 
 
 function connectToDB(){
