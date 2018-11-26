@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 	if(isset($_POST['Yesbutton']))
 	{
 		//header('Location: http://students.engr.scu.edu/~stointon/Uadopt/breed_search.php');
-        header('Location: https://uadopt.netlify.com/breed_search.html');
+        header('Location: http://students.engr.scu.edu/~stointon/Uadopt/breed_search.php');
 	}
 	//goes to most important traits selection
 	else 

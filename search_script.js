@@ -26,7 +26,7 @@ function send() {
     		queryString += "?" + x.elements[i].value; // send name and value from form
     }
     console.log("queryString: " + queryString);
-    window.location.href = "negative_traits_selection.html" + queryString;
+    window.location.href = "https://uadopt.netlify.com/negative_traits_selection.html" + queryString;
 	}
 function includes(array,trait) {
 	for (var i=0; i<array.length; i++) {
