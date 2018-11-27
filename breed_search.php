@@ -2,7 +2,7 @@
 <head>
 	<title>Search Breeds</title>
 	<link href="overall_style.css" rel="stylesheet" type="text/css">
-	<script src="https://uadpot.netlify.com/search_script.js"></script>
+	<script src="https://uadopt.netlify.com/search_script.js"></script>
 </head>
 <body>
 	<div id="search bar">
