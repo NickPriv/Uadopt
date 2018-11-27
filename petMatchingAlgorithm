@@ -1,0 +1,17 @@
+
+//gather user trait preferences
+//gather each breed's traits, loop through breeds and call matching algorithm on each breed
+
+matchingAlgorithm (userTraits[], breedTraits[])
+{
+	for (int i =0; i<breedTraits.length(); i++)
+	{
+		if (abs(userTraits[i] - breedTraits[i]) > 0)
+		{
+ 			matchIndex+= abs(userTraits[i] - breedTraits[i])+ abs(userTraits[i] - breedTraits[i])-1);
+		}
+	}
+	return matchIndex;
+}
+
+// add matchIndex to match database with corresponding user id and breed id
