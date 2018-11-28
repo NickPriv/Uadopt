@@ -17,7 +17,7 @@
         echo "<br> connection failed:";
         exit;
     }
-    $sqlUserdata = oci_parse($conn, "SELECT userID, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, userSize FROM Adopter WHERE userID = (SELECT MAX(userID) from Adopter)");
+    $sqlUserdata = oci_parse($conn, "SELECT userID, noise, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, userSize FROM Adopter WHERE userID = (SELECT MAX(userID) from Adopter)");
     $res = oci_execute($sqlUserdata);
 
 
