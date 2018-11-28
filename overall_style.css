@@ -1,6 +1,9 @@
 body {
     background-color: powderblue;
 }
+form {
+    font-size:18px;
+}
 
 h1 {
     color: black;
