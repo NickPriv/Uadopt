@@ -46,20 +46,12 @@
     //rowPetTraits is the array that holds the petId and 11 traits after it 
     //the while loop goes through all of the pet rows in the database         
     while(($rowPetTraits = oci_fetch_array($sqlPetTraits, OCI_BOTH)) != false){
-<<<<<<< HEAD
 	for ($i = 1; $i<=11; $i++)
 	{
 		$matchIndex=0; 
 		if (abs($userTraits[$i] - $rowPetTraits[$i]) > 0)
 		{
  			$matchIndex+= abs($userTraits[$i] - $rowPetTraits[$i])+ abs($userTraits[$i] - $rowPetTraits[$i])-1;
-=======
-        $userTraits[1] $rowPetTraits [1]
-	for ($i = 1; $i<=11; $i++){
-		$matchIndex=0; 
-		if (abs($userTraits[$i] - $rowPetTraits[$i]) > 0){
- 			$matchIndex+= abs($userTraits[$i] - $rowPetTraits[$i])+ abs($userTraits[$i] - $rowPetTraits[$i])-1);
->>>>>>> 13c1e50e7f254431333a5a2d2b34485f76332c54
 		}
 	}   
 
