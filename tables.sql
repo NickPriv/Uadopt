@@ -113,8 +113,7 @@ WHERE userID = (SELECT MAX(userID) from Adopter);
 
 select userId, breed, matchpercentage 
 from match 
-where userID = (SELECT MAX(userID) from Adopter) AND 
-where Rownum <=5
+where userID = (SELECT MAX(userID) from Adopter) AND Rownum <=5
 order by matchpercentage;
 
 

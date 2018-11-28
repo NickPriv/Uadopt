@@ -55,8 +55,8 @@
                 "<li>Temperament: " . $row[9] . "  <input type=\"checkbox\" name=\"temperament\"> </li>" .
                 "<li>Time commitment: " . $row[10] . "  <input type=\"checkbox\" name=\"time\" > </li>" .
                 "<li>Easy to train: " . $row[11] . "  <input type=\"checkbox\" name=\"training\"> </li>" .
-                "<li>Size: " . $row[12] . "  <input type=\"checkbox\" name=\"size\" > </li>" .
-                "<li>Health: " . $row[13] . "  <input type=\"checkbox\" name=\"health\"> </li>" .                  
+                "<li>Health: " . $row[12] . "  <input type=\"checkbox\" name=\"health\" > </li>" .
+                "<li>Size: " . $row[13] . "  <input type=\"checkbox\" name=\"size\"> </li>" .                  
             "</ul>" ;
             }
 

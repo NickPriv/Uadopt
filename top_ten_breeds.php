@@ -3,12 +3,6 @@
 	<link href="overall_style.css" rel="stylesheet" type="text/css">
 </head> 
 	<body>
-<h1> Your top 5 compatible breeds are: </h1>
-<p> dog 1 <br>
-	dog 2 <br>
-	dog 3 <br>
-	dog 4 <br>
-	dog 5 <br>
 	<?php
 
 	$cfg = parse_ini_file('setup.ini');
@@ -17,7 +11,7 @@
         echo "<br> connection failed:";
         exit;
     }
-    $sqlUserdata = oci_parse($conn, "SELECT userID, noise, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, userSize FROM Adopter WHERE userID = (SELECT MAX(userID) from Adopter)");
+    $sqlUserdata = oci_parse($conn, "SELECT userID, noise, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, userSize, name FROM Adopter WHERE userID = (SELECT MAX(userID) from Adopter)");
     $res = oci_execute($sqlUserdata);
 
 
@@ -30,8 +24,10 @@
 
     while(($row = oci_fetch_array($sqlUserdata, OCI_BOTH)) != false){
         $userTraits = array($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11]);
-
+        echo "<h1>".$row[12].", here are your top 5 compatible breeds: </h1>";
     }
+
+
 
     $sqlPetTraits = oci_parse($conn, "SELECT breed, noise, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, petSize from Pet");
     $resPetTraits = oci_execute($sqlPetTraits);
@@ -55,26 +51,27 @@
 		}
 	}   
 
-	print_r($userTraits[0]);
-	print_r($rowPetTraits[0]);
 	print_r($matchIndex);
 	$sqlMatch = oci_parse($conn, "INSERT INTO Match values(:userId, :breed, :matchPercentage)");
 	oci_bind_by_name($sqlMatch, ':userId', $userTraits[0]);
     oci_bind_by_name($sqlMatch, ':breed', $rowPetTraits[0]);
     oci_bind_by_name($sqlMatch, ':matchPercentage', $matchIndex);
 
-    $res = oci_execute($sqlMatch);
-    if ($res)
-        echo '<br><br> <p style="color:green;font-size:20px">Data successfully inserted</p>';
-    else{
-        $e = oci_error($sqlStatement); 
-            echo $e['the data was not inserted']; 
-    }  
-
     }
     
 
+    $sqlGetMatch = oci_parse($conn, "SELECT breed FROM match WHERE userID = (SELECT MAX(userID) from Adopter) AND Rownum <=5 ORDER BY matchpercentage");
+    $resMatch = oci_execute($sqlGetMatch);
 
+    $counter = 1;
+     while(($rowMatch = oci_fetch_array($sqlGetMatch, OCI_BOTH)) != false){
+        echo "<p> Dog ".$counter.": " . $rowMatch[0]. "</p>";
+        $counter++;
+    }
+
+
+
+    
 
 
 	?>
