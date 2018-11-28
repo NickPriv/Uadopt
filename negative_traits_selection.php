@@ -16,9 +16,7 @@
             <form id="frm1">
             <span id="info">
             <?php
-	    
-	<PHP> include('overall_style.css'); <PHP>
-	<PHP> include('logo.css'); <PHP>
+
             $myurl = $_SERVER['REQUEST_URI'];
             $temp = explode('?', $myurl);
             $breedName = end($temp);
