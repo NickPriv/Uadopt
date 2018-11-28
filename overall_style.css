@@ -28,7 +28,7 @@ p {
     color: black;
     font-family: veranda;
     font-size: 24px;
-    text-decoration: underline;
+    font-weight: bold;
 }
 .button {
     color: #404040;
