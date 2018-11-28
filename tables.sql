@@ -96,12 +96,6 @@ INSERT INTO Pet values ('Vizsla', 5, 5, 4, 2, 5, 5, 5, 4, 5, 4, 4, 'Vizslas are 
 
 INSERT INTO Adopter values (sequence_adopter.nextval, 'steve', 22, 'single', 'apartment', 'yes', 0, 'stable', 2, 5, 'yes', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
-INSERT INTO Match(1,'Brittany Spaniel', 0);
-INSERT INTO Match(1,'Brittany ', 1);
-INSERT INTO Match(1,'Brittadfa', 2);
-INSERT INTO Match(1,'adfa', 3);
-INSERT INTO Match(1,'lkjklj', 4);
-INSERT INTO Match(1,'Spaniel', 5);
 
 UPDATE Adopter 
 SET noise = 5,
@@ -117,7 +111,11 @@ SET noise = 5,
 	userSize = 2
 WHERE userID = (SELECT MAX(userID) from Adopter);
 
-SELECT breed from matches WHERE userID = (SELECT MAX(userID) from Adopter) ORDER BY matchpercentage;
+select userId, breed, matchpercentage 
+from match 
+where userID = (SELECT MAX(userID) from Adopter) AND 
+where Rownum <=5
+order by matchpercentage;
 
 
 

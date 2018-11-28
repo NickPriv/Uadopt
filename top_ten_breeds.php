@@ -25,9 +25,12 @@
     	die('Could not get data: ');
     }        
 
-            
+    //if statement to see if data is full 
+
+
     while(($row = oci_fetch_array($sqlUserdata, OCI_BOTH)) != false){
-        $userTraits = array($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10]);
+        $userTraits = array($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11]);
+
     }
 
     $sqlPetTraits = oci_parse($conn, "SELECT breed, noise, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, petSize from Pet");
@@ -43,15 +46,31 @@
     //rowPetTraits is the array that holds the petId and 11 traits after it 
     //the while loop goes through all of the pet rows in the database         
     while(($rowPetTraits = oci_fetch_array($sqlPetTraits, OCI_BOTH)) != false){
-        $userTraits[1] $rowPetTraits [1]
 	for ($i = 1; $i<=11; $i++)
 	{
 		$matchIndex=0; 
 		if (abs($userTraits[$i] - $rowPetTraits[$i]) > 0)
 		{
- 			$matchIndex+= abs($userTraits[$i] - $rowPetTraits[$i])+ abs($userTraits[$i] - $rowPetTraits[$i])-1);
+ 			$matchIndex+= abs($userTraits[$i] - $rowPetTraits[$i])+ abs($userTraits[$i] - $rowPetTraits[$i])-1;
 		}
 	}   
+
+	print_r($userTraits[0]);
+	print_r($rowPetTraits[0]);
+	print_r($matchIndex);
+	$sqlMatch = oci_parse($conn, "INSERT INTO Match values(:userId, :breed, :matchPercentage)");
+	oci_bind_by_name($sqlMatch, ':userId', $userTraits[0]);
+    oci_bind_by_name($sqlMatch, ':breed', $rowPetTraits[0]);
+    oci_bind_by_name($sqlMatch, ':matchPercentage', $matchIndex);
+
+    $res = oci_execute($sqlMatch);
+    if ($res)
+        echo '<br><br> <p style="color:green;font-size:20px">Data successfully inserted</p>';
+    else{
+        $e = oci_error($sqlStatement); 
+            echo $e['the data was not inserted']; 
+    }  
+
     }
     
 

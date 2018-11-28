@@ -3,10 +3,12 @@
 <head>
 	<title>Enter User Info</title>
 	<link href="overall_style.css" rel="stylesheet" type="text/css">
+	<link href="logo.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
 	<style> 
 	       li {
     		color: black;
-    		font-family: veranda;
+    		font-family: Poppins;
     		font-size: 24px;
 		font-weight: bold;
 		}
@@ -22,6 +24,9 @@
 	</style>
 </head>
 <body>
+		<a href="index.html">
+ 			<img src="uadoptLogo.png" id="logo">
+		</a>
 		<form id="frm1" method = "post" action = "http:students.engr.scu.edu/~stointon/Uadopt/insertdata.php">
 		<ol>
 		<li>What is your first name?</li><br>
@@ -52,7 +57,7 @@
 		<li>Do you have any past dog experience? </li><br>
 		<input type="radio" name="experience" value="yes" required>Yes<br>
 		<input type="radio" name="experience" value="no" required>No<br><br>
-		<li>Do you have a specific dog breed that you are already interested</li><br>
+		<li>Do you have a specific dog breed that you are already interested in?</li><br>
 			<button class="button button1" input type="submit" name="Yesbutton" value= "Yes"> Yes </button>
 			<button class="button button1" input type="submit" name="Nobutton" value= "No"> No </button>
 		</form> 

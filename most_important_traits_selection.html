@@ -1,22 +1,26 @@
 <head>
 	<script type="text/javascript" src="search_script.js"></script>
 	<link href="overall_style.css" rel="stylesheet" type="text/css">
-	<style> {
-		.button2 {
-      
-    	padding: 5px 10px;
-    	font-size: 18px;
-    	border-radius: 8px;
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+	<link href="logo.css" rel="stylesheet" type="text/css">
+	<style> 
+		.button1 {
+			padding: 5px 10px;
+    			font-size: 18px;
+    			border-radius: 8px;
     		}
 	</style>
 </head>
 <body>
+	<a href="index.html">
+ 		<img src="uadoptLogo.png" id="logo">
+	</a>
 <h2>Select the Traits that are Most Important to You</h2>
 <form id="frm1">
 <input type="checkbox" name="barking" value="Noise/Barking"> Noise/Barking<br>
 <input type="checkbox" name="energy" value="Activity Level"> Activity Level<br>
 <input type="checkbox" name="intelligence" value="Intelligence"> Intelligence<br>
-<input type="checkbox" name="shedding" value="Hair Shedding"> Hair Shedding/barking<br>
+<input type="checkbox" name="shedding" value="Hair Shedding"> Hair Shedding<br>
 <input type="checkbox" name="kids" value="Good With Children"> Good With Children<br>
 <input type="checkbox" name="cuddle" value="Cuddly"> Cuddly<br>
 <input type="checkbox" name="temperament" value="Temperament"> Temperament<br>
@@ -24,6 +28,7 @@
 <input type="checkbox" name="training" value="Easy To Train"> Easy To Train<br>
 <input type="checkbox" name="health" value="Health"> Health<br>
 <input type="checkbox" name="size" value="Size"> Size<br>
- <button class="button button2" input type="button" onclick="selectAdditionalTraits()">Next </button>
+
+	<button class="button button1" input type="button" onclick="selectAdditionalTraits()">Next </button>
 </form>
 </body>

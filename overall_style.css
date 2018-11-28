@@ -1,5 +1,6 @@
 body {
     background-color: powderblue;
+    font-family: Poppins;
 }
 form {
     font-size:18px;
@@ -8,14 +9,14 @@ form {
 h1 {
     color: black;
     text-align: center;
-    font-family: veranda;
+    font-family: Poppins;
     font-size: 48px;
 }
 
 h2 {
     color: black;
     text-alight: right;
-    font-family: veranda;
+    font-family: Poppins;
     font-size: 24px;
 }
 
@@ -26,12 +27,12 @@ h3 {
 
 p {
     color: black;
-    font-family: veranda;
+    font-family: Poppins;
     font-size: 24px;
     font-weight: bold;
 }
 .button {
     color: #404040;
-    font-family: veranda;
+    font-family: Poppins;
     font-size: 24px;
 }

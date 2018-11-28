@@ -173,7 +173,7 @@ function insertToDB($userInfo){
                 temperment = :temperament,
                 timeCommitment = :timeForDog,
                 easeToTrain = :training,
-                heath = :health,
+                health = :health,
                 userSize = :b_size
             WHERE userID = (SELECT MAX(userID) from Adopter)
         ");
