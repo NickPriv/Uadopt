@@ -51,13 +51,14 @@
 		}
 	}   
 
-	print_r($matchIndex);
 	$sqlMatch = oci_parse($conn, "INSERT INTO Match values(:userId, :breed, :matchPercentage)");
 	oci_bind_by_name($sqlMatch, ':userId', $userTraits[0]);
     oci_bind_by_name($sqlMatch, ':breed', $rowPetTraits[0]);
     oci_bind_by_name($sqlMatch, ':matchPercentage', $matchIndex);
+    $res = oci_execute($sqlMatch);
 
     }
+    
     
 
     $sqlGetMatch = oci_parse($conn, "SELECT breed FROM match WHERE userID = (SELECT MAX(userID) from Adopter) AND Rownum <=5 ORDER BY matchpercentage");
