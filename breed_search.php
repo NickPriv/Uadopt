@@ -3,6 +3,7 @@
 	<title>Search Breeds</title>
 	<link href="overall_style.css" rel="stylesheet" type="text/css">
 	<link href="logo.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
 	<script src="https://uadopt.netlify.com/search_script.js"></script>
 </head>
 <body>
