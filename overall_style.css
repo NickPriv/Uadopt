@@ -1,6 +1,9 @@
 body {
     background-color: powderblue;
 }
+form {
+    font-size:18px;
+}
 
 h1 {
     color: black;
@@ -25,10 +28,10 @@ p {
     color: black;
     font-family: veranda;
     font-size: 24px;
-    text-decoration: underline;
+    font-weight: bold;
 }
 .button {
     color: #404040;
     font-family: veranda;
-    font-size: 20px;
+    font-size: 24px;
 }
