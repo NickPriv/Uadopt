@@ -26,7 +26,7 @@
                 echo "<br> connection failed:";
                 exit;
             }
-            $sql = oci_parse($conn, "SELECT photo, breed FROM pet");
+            $sql = oci_parse($conn, "SELECT photo, breed FROM pet ORDER BY breed");
             $res = oci_execute($sql);
 
 
