@@ -37,6 +37,11 @@ p {
     font-family: Poppins;
     font-size: 24px;
 }
+button {
+    color: #404040;
+    font-family: Poppins;
+    font-size: 24px;
+}
 
 #searchbar{
     font size: 18px;
