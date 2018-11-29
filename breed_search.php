@@ -10,7 +10,7 @@
 	<a href="index.html">
  		<img src="uadoptLogo.png" id="logo">
 	</a>
-	<div id="search bar">
+	<div id="searchbar">
 	<input type="text" id="myInput" onkeyup="search()" placeholder="Search for breeds...">
 	<span id="selected"></span>
 	</div>
