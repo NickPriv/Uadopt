@@ -6,10 +6,15 @@
         <link href="logo.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
         <script type="text/javascript" src="https://uadopt.netlify.com/search_script.js"></script>
+	<?php
+	    echo "<link rel='stylesheet' type='text/css' href='overall_style.css' />";  
+	    echo "<link rel='stylesheet' type='text/css' href='logo.css' />";  
+	?>
+	    
     </head>
         <a href="index.html">
- 			<img src="uadoptLogo.png" id="logo">
-		</a>
+ 		<img src="uadoptLogo.png" id="logo">
+	</a>
         <div>
             <h2>The traits of this dog breed have been ranked on a scale of 1 to 5, with 1= low and 5= high.</h2>
             <h2>Please select any boxes with a rank that you would not prefer in your ideal dog.</h2>
