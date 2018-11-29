@@ -1,7 +1,7 @@
 <html>
 <head>
 	<link href="https://uadopt.netlify.com/overall_style.css" rel="stylesheet" type="text/css">
-        <link href="https://uadopt.netlify.com/logo.css" rel="stylesheet" type="text/css">
+        <link href="../logo.css" rel="stylesheet" type="text/css">
 </head> 
 	<body>
 	<?php
