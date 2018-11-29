@@ -2,14 +2,11 @@
 <html>
     <head>
         <title>Uadopt</title>
-        <link href="overall_style.css" rel="stylesheet" type="text/css">
-        <link href="logo.css" rel="stylesheet" type="text/css">
+        <link href="https://uadopt.netlify.com/overall_style.css" rel="stylesheet" type="text/css">
+        <link href="https://uadopt.netlify.com/logo.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
         <script type="text/javascript" src="https://uadopt.netlify.com/search_script.js"></script>
-	<?php
-	    echo "<link rel='stylesheet' type='text/css' href='overall_style.css' />";  
-	    echo "<link rel='stylesheet' type='text/css' href='logo.css' />";  
-	?>
+	
 	    
     </head>
         <a href="index.html">
