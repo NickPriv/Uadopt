@@ -2,6 +2,9 @@
 body {
     background-color: powderblue;
     font-family: Poppins;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-bottom: 25px
 }
 form {
     font-size:18px;
