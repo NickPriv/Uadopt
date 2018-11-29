@@ -76,6 +76,7 @@
 
 
 	?>
+	<button type="button" class="button" onclick="location.href='most_important_traits_selection.html';">Get Started</button><br><br>
 </p>
 	</body>
 </html>
