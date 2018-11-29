@@ -39,6 +39,7 @@ p {
     padding: 5px 10px;
     font-size: 18px;
     border-radius: 8px;
+    font-family: Poppins;
 }
 button {
     color: #404040;
@@ -47,8 +48,10 @@ button {
     padding: 5px 10px;
     font-size: 18px;
     border-radius: 8px;
+    font-family: Poppins;
 }
 
 #searchbar{
     font size: 18px;
+    font-family: Poppins;
 }
