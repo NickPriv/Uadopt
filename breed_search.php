@@ -14,6 +14,10 @@
 	<input type="text" id="myInput" onkeyup="search()" placeholder="Search for breeds...">
 	<span id="selected"></span>
 	</div>
+	<div class="continue" align="right">
+	<button type="button" class="button" onclick="send()">Continue</button>
+	</div>
+	<p> Please select the checkbox next to dog you are interested in and then click the continue button. </p>
 	<div class="search_table">
 	<form id="frm1">
 	<table id="myTable">
@@ -48,9 +52,6 @@
 
 	</table>
 	</form>
-</div>
-<div class="continue">
-	<button type="button" class="button" onclick="send()">Continue</button>
 </div>
 </body>
 </html>
