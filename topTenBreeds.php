@@ -8,6 +8,7 @@
 <body>
     <a href="https://uadopt.netlify.com/index.html">
         <img src="uadoptLogo.png" id="logo">
+    </a>
 	<?php
 
 	$cfg = parse_ini_file('setup.ini');
