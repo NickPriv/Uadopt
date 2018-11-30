@@ -1,9 +1,10 @@
 <html>
 <head>
+	<!--initialize page-->
 	<link href="https://uadopt.netlify.com/overallStyle.css" rel="stylesheet" type="text/css">
         <link href="https://uadopt.netlify.com/logo.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
-    <script src="https://uadopt.netlify.com/searchScript.js"></script>
+    	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+    	<script src="https://uadopt.netlify.com/searchScript.js"></script>
 </head>
 <body>
     <a href="https://uadopt.netlify.com/index.html">
@@ -11,6 +12,7 @@
     </a>
 	<?php
 
+	//initial database setup
 	$cfg = parse_ini_file('setup.ini');
     $conn = oci_connect($cfg['db_user'], $cfg['db_pass'],$cfg['db_path']);
     if(!$conn){
@@ -94,6 +96,7 @@
 
 	?>
 </p>
+	<!-- button provides the option to adjust user preferences if they are not fully satisfied with their results-->
 	<button type="button" class="button" onclick="location.href='https://uadopt.netlify.com/mostImportantTraitsSelection.html';">Refine preferences</button><br><br> 
 	</body>
 </html>
