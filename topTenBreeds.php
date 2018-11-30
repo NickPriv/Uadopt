@@ -89,6 +89,6 @@
 
 	?>
 </p>
-	<button type="button" class="button" onclick="location.href='https://uadopt.netlify.com/most_important_traits_selection.html';">Adjust preferences</button><br><br>
+	<button type="button" class="button" onclick="location.href='https://uadopt.netlify.com/mostImportantTraitsSelection.html';">Adjust preferences</button><br><br>
 	</body>
 </html>
