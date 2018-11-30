@@ -45,7 +45,7 @@ function selectInitialTraits() { // For NegativeTraitsSelection.html
 			selectedTraits.push(x.elements[i].name);
 		}
 	}
-	window.location.href = "https://uadopt.netlify.com/preference_selection.html" + queryString;
+	window.location.href = "https://uadopt.netlify.com/preferenceSelection.html" + queryString;
 }
 function selectAdditionalTraits() { // For MostImportantTraitsSelection.html
 	var queryString = decodeURIComponent(window.location.search);
@@ -57,7 +57,7 @@ function selectAdditionalTraits() { // For MostImportantTraitsSelection.html
 			selectedTraits.push(x.elements[i].name);
 		}
 	}
-	window.location.href = "preference_selection.html" + queryString;
+	window.location.href = "preferenceSelection.html" + queryString;
 }
 function displaySelectedBreeds() { // For NegativeTraitsSelection.html
 	var breedPhotos = new Map();
