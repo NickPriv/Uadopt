@@ -90,6 +90,6 @@
 
 	?>
 </p>
-	<button type="button" class="button" onclick="location.href='https://uadopt.netlify.com/mostImportantTraitsSelection.html';">Adjust preferences</button><br><br>
+	<button type="button" class="button" onclick="location.href='https://uadopt.netlify.com/mostImportantTraitsSelection.html';">Refine preferences</button><br><br>
 	</body>
 </html>
