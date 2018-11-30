@@ -17,6 +17,8 @@
         echo "<br> connection failed:";
         exit;
     }
+    
+	/*collects user data*/
     $sqlUserdata = oci_parse($conn, "SELECT userID, noise, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, userSize, name FROM Adopter WHERE userID = (SELECT MAX(userID) from Adopter)");
     $res = oci_execute($sqlUserdata);
 
@@ -34,7 +36,7 @@
     }
 
 
-
+	//stores breed traits
     $sqlPetTraits = oci_parse($conn, "SELECT breed, noise, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, petSize from Pet");
     $resPetTraits = oci_execute($sqlPetTraits);
 
@@ -46,7 +48,8 @@
 
     //userTraits is the array that hold the userID and 11 traits after it 
     //rowPetTraits is the array that holds the petId and 11 traits after it 
-    //the while loop goes through all of the pet rows in the database         
+    //the while loop goes through all of the pet rows in the database
+	//the for loop compares the breed traits with user preferences to calculate their match percentage        
     while(($rowPetTraits = oci_fetch_array($sqlPetTraits, OCI_BOTH)) != false){
 	$matchIndex=0; 
 	for ($i = 1; $i<=11; $i++)
@@ -57,7 +60,7 @@
 		}
 	}   
 
-	$sqlMatch = oci_parse($conn, "INSERT INTO Match values(:userId, :breed, :matchPercentage)");
+	$sqlMatch = oci_parse($conn, "INSERT INTO Match values(:userId, :breed, :matchPercentage)"); //adds match percentage to match database
 	oci_bind_by_name($sqlMatch, ':userId', $userTraits[0]);
     oci_bind_by_name($sqlMatch, ':breed', $rowPetTraits[0]);
     oci_bind_by_name($sqlMatch, ':matchPercentage', $matchIndex);
@@ -65,16 +68,17 @@
     }
     
     
-
+	/* orders matches from best to worst*/
     $sqlGetMatch = oci_parse($conn, "SELECT breed FROM match 
     WHERE userID = (SELECT MAX(userID) from Adopter) 
-    ORDER BY matchpercentage asc");
+    ORDER BY matchpercentage asc"); 
     $resMatch = oci_execute($sqlGetMatch);
 
+	/*loops through and displays top 5 matches*/
     for($x = 1; $x <= 5; $x++) {
-        if (($rowMatch = oci_fetch_array($sqlGetMatch, OCI_BOTH)) != false)
+        if (($rowMatch = oci_fetch_array($sqlGetMatch, OCI_BOTH)) != false) 
         {
-            echo "<p> Dog ".$x. ": " . $rowMatch[0]. "</p>";
+            echo "<p> Dog ".$x. ": " . $rowMatch[0]. "</p>"; 
         }
     }
  
@@ -90,6 +94,6 @@
 
 	?>
 </p>
-	<button type="button" class="button" onclick="location.href='https://uadopt.netlify.com/mostImportantTraitsSelection.html';">Refine preferences</button><br><br>
+	<button type="button" class="button" onclick="location.href='https://uadopt.netlify.com/mostImportantTraitsSelection.html';">Refine preferences</button><br><br> 
 	</body>
 </html>
