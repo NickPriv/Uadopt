@@ -71,7 +71,9 @@
     
     
 	//orders matches from best to worst
-    $sqlGetMatch = oci_parse($conn, "SELECT breed FROM match 
+    $sqlGetMatch = oci_parse($conn, "SELECT match.breed, pet.description, pet.photo
+    FROM match 
+    LEFT JOIN pet ON match.breed = pet.breed
     WHERE userID = (SELECT MAX(userID) from Adopter) 
     ORDER BY matchpercentage asc"); 
     $resMatch = oci_execute($sqlGetMatch);
@@ -80,7 +82,9 @@
     for($x = 1; $x <= 5; $x++) {
         if (($rowMatch = oci_fetch_array($sqlGetMatch, OCI_BOTH)) != false) 
         {
-            echo "<p> Dog ".$x. ": " . $rowMatch[0]. "</p>"; 
+            echo "<p> Dog ".$x. ": " . $rowMatch[0]. "</p>" . 
+            "<img src=" . $rowMatch[2]. " height=112 > <br>" .
+            "<p3>"  . $rowMatch[1]. "</p3>";
         }
     }
 
