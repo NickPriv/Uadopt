@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
 }
 
-
+//conects to database
 function connectToDB(){
 
         $cfg = parse_ini_file('setup.ini');
@@ -41,6 +41,7 @@ function connectToDB(){
         return $conn;
 }
 
+//checks if an array is empty
 function checkEmpty($array)
 {
 	foreach ($array as $value) {
@@ -51,12 +52,14 @@ function checkEmpty($array)
 	return true;
 }
 
+//prepares input
 function prepareInput($inputData){
     $inputData = trim($inputData);
     $inputData  = htmlspecialchars($inputData);
     return $inputData;
 }
 
+//collects user info from userinfo.html
 function enterUser(){
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {  
@@ -109,6 +112,7 @@ function enterUser(){
     }    
 }
 
+//adds user info to database
 function insertToDB($userInfo){
 	$conn = connectToDB();
     //sql statement that will read into the database
