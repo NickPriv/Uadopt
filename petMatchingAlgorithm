@@ -1,3 +1,4 @@
+//Pseudocode for matching algorithm 
 
 //gather user trait preferences
 //gather each breed's traits, loop through breeds and call matching algorithm on each breed
