@@ -11,8 +11,8 @@
  		<img src="uadoptLogo.png" id="logo">
 	</a>
 	<p> Please select the checkbox next to dog you are interested in and then click the continue button. </p>
-	<div id="searchbar" class id= "searchbar" style= "width: 300px; top: 50px; left: 300px; font-size:18pt;">
-	<input type="text" id="myInput" onkeyup="search()" placeholder="Search for breeds...">
+	<div id="searchbar" class id= "searchbar">
+	<input type="text" id="myInput" style= "width: 300px; font-size:18pt;" onkeyup="search()" placeholder="Search for breeds...">
 	<span id="selected"></span>
 	</div>
 	<div class="continue" align="right">
