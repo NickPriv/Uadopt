@@ -5,6 +5,7 @@
 	<link href="overall_style.css" rel="stylesheet" type="text/css">
 	<link href="logo.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="uadoptLogo.png">
 	<style> 
 	       li {
     		color: black;
@@ -30,9 +31,9 @@
 		<form id="frm1" method = "post" action = "http:students.engr.scu.edu/~stointon/Uadopt/insertdata.php">
 		<ol>
 		<li>What is your first name?</li><br>
-		<input type="text" name="name" required><br><br>
+		<input type="text" name="name" required style= "width: 300px; font-size:16pt"><br><br>
 		<li>What is your age?</li><br>
-		<input type="number" name="age"required><br><br>
+		<input type="number" name="age"required style= "width: 300px; font-size:16pt"><br><br>
 		<li>What is your marital status?</li><br>
 		<input type="radio" name="marital" value="single" required>Single or Unmarried<br>
 		<input type="radio" name="marital" value="married" required>Married<br><br>
@@ -40,20 +41,20 @@
 		<input type="radio" name="home" value="small" required>Small<br>
 		<input type="radio" name="home" value="medium" required>Medium<br>
 		<input type="radio" name="home" value="large" required>Large<br><br>
-		<li>What is your backyard size?</li><br>
+		<li>How large is your backyard?</li><br>
 		<input type="radio" name="backyard" value="no" required>None<br>
 		<input type="radio" name="backyard" value="small" required>Small<br>
 		<input type="radio" name="backyard" value="medium" required>Medium<br>
 		<input type="radio" name="backyard" value="large" required>Large<br><br>
-		<li>How many children do you have?</li><br>
-		<input type="number" name="children" required><br><br>
+		<li>How many children live in your current household?</li><br>
+		<input type="number" name="children" required style= "width: 300px; font-size:16pt"><br><br>
 		<li>What is your income status?</li><br>
 		<input type="radio" name="income" value="stable" required>Stable<br>
 		<input type="radio" name="income" value="unstable" required>Unstable<br><br>
 		<li>What is your activity level?</li><br>
-		Low <input type="range" name="activity" min="1" max="5" required> High<br><br>
+		Low <input type="range" name="activity" min="0" max="10" required> High<br><br>
 		<li>How much time (on average) would you have per day to spend time with your dog?</li><br>
-		Not Much <input type="range" name="time" min="1" max="5" required> A Lot<br><br>
+		Not Much <input type="range" name="time" min="0" max="10" required> A Lot<br><br>
 		<li>Do you have any past dog experience? </li><br>
 		<input type="radio" name="experience" value="yes" required>Yes<br>
 		<input type="radio" name="experience" value="no" required>No<br><br>
