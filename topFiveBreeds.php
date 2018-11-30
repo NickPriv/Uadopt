@@ -83,11 +83,6 @@
             echo "<p> Dog ".$x. ": " . $rowMatch[0]. "</p>"; 
         }
     }
-<<<<<<< HEAD:topTenBreeds.php
-  
-
-=======
->>>>>>> f98fe10654de3ca67fb6826faee07cc8b0adef46:topFiveBreeds.php
 
 	?>
 </p>
