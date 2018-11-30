@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+	<!--Initialize page-->
         <title>Uadopt</title>
         <link href="https://uadopt.netlify.com/overallStyle.css" rel="stylesheet" type="text/css">
         <link href="https://uadopt.netlify.com/logo.css" rel="stylesheet" type="text/css">
