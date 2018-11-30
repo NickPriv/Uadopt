@@ -3,66 +3,71 @@
 <header>
 	<link href="logo.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
-<style type="text/css">
+
+	<!-- home page specific styling -->
+	<style type="text/css">
 body {
- font-family: "Poppins", sans-serif;
- font-size: 14px;
- font-weight: 300;
- line-height: 1.5em;
- position: relative;
- background-color: white; 
- padding-top: 50px;
- padding-left: 50px;
- padding-bottom: 150px;
- border: 60px solid powderblue;
- border-radius: 10px;
+	font-family: "Poppins", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.5em;
+	position: relative;
+	background-color: white; 
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-bottom: 150px;
+	border: 60px solid powderblue;
+	border-radius: 10px;
 }
 
-.getStarted {
-  line-height: 42px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 25px;
-  background: white;
-  border: 1px solid powderblue;
-  color: black;
-  display: inline-block;
-  font-weight: 500;
-  position: relative;
-  text-transform: uppercase;
-  position: relative;
+/*for get started button*/
+.getStarted { 
+  	line-height: 42px;
+  	padding-left: 30px;
+  	padding-right: 30px;
+  	border-radius: 25px;
+  	background: white;
+  	border: 1px solid powderblue;
+  	color: black;
+  	display: inline-block;
+  	font-weight: 500;
+  	position: relative;
+  	text-transform: uppercase;
+  	position: relative;
 }
 
 .getStarted:focus {
-  outline: none;
+  	outline: none;
 }
 
 .getStarted span {
-  color: black;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-60%);
-  right: 30px;
+  	color: black;
+  	position: absolute;
+  	top: 50%;
+  	transform: translateY(-60%);
+  	right: 30px;
 }
 
 .getStarted:hover {
-  background: lightgrey;
+  	background: lightgrey;
 }
 
 .getStarted:hover span {
-  color: lightgrey;
-  right: 20px;
+  	color: lightgrey;
+  	right: 20px;
 }
 
+/* styling for "adoption made simple" heading */
 h1 {
-  font-family: "Poppins", sans-serif;
-  color: black;
-  line-height: 1.5em;
-  margin-bottom: 0;
-  margin-top: 25px;
-  font-weight: 500;
+  	font-family: "Poppins", sans-serif;
+  	color: black;
+  	line-height: 1.5em;
+  	margin-bottom: 0;
+  	margin-top: 25px;
+  	font-weight: 500;
 }
 
+/* subheading styling*/
 p{
 	margin-bottom: 400px;
   	margin-top: 0;
@@ -71,39 +76,41 @@ p{
   	color: grey;
 }
 
-h2
-{
-	color: white;
-    text-align: left;
-    padding-left: 25px;
-    font-size: 16px;
-    font-weight: 300;
-}
-
+/* styling alignment for both headings */
 .mainText h1 {
-  font-size: 40px;
-  font-weight: 550;
-  line-height: 1.6;
-  margin-bottom: 20px;
+	font-size: 40px;
+ 	font-weight: 550;
+  	line-height: 1.6;
+  	margin-bottom: 20px;
 }
 
 .mainText p {
-  margin-bottom: 0;
-  font-size: 16px;
+  	margin-bottom: 0;
+  	font-size: 16px;
 }
 
-
+/* footer styling */
+h2
+{
+	color: white;
+	text-align: left;
+	padding-left: 25px;
+	font-size: 16px;
+	font-weight: 300;
+}
+		
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: grey;
-    color: white;
-    text-align: left;
-    padding-left: 25px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: grey;
+	color: white;
+	text-align: left;
+	padding-left: 25px;
 }
 
+/* home page dog photo styling */
 #dog{
 	display: block;
 	border: 20px solid powderblue;
@@ -129,7 +136,7 @@ h2
 		<img id= "dog" src="berneseMountainDog.jpg" align="right">
 		<h1>Adoption <br> made simple</h1>
 		<p>Why not take advantage of artificial intelligence to match you with the perfect pet? </p>
-		<br><br>
+		<br><br> <!-- button redirects to userInfo.html-->
 		<a href="userInfo.html" class="getStarted">Get Started</a>
 	</div>
 
