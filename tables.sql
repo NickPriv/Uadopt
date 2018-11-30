@@ -111,27 +111,5 @@ SET noise = 5,
 	userSize = 2
 WHERE userID = (SELECT MAX(userID) from Adopter);
 
-SELECT photo from pet where breed IN
-(SELECT userID, breed, matchpercentage FROM match 
-WHERE userID = (SELECT MAX(userID) from Adopter) 
-AND Rownum <=5 
-ORDER BY matchpercentage);
-
-SELECT breed, photo, description from pet where breed IN 
-(SELECT breed FROM match 
-WHERE userID = (SELECT MAX(userID) from Adopter)) ;
-
- SELECT breed, photo, description from pet where breed IN (SELECT breed FROM match 
-(WHERE userID = (SELECT MAX(userID) from Adopter)
-AND Rownum <=5) 
-ORDER BY matchpercentage);
-
-Select breed, description, photo From pet where breed IN (SELECT breed, matchpercentage FROM match WHERE
-(userID = (SELECT MAX(userID) from Adopter))
-order by matchpercentage);
-
-
-SELECT breed, description, photo from pet where breed in (SELECT breed FROM match WHERE
-userID = '115');
 
 
