@@ -1,4 +1,5 @@
 <head>
+  <!--initialize page-->
   <script type="text/javascript" src="./searchScript.js"></script>
   <link href="overallStyle.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
@@ -21,98 +22,98 @@
 </head>
 
 <body onload="javascript:displayQuestionnaire()">
-<a href="index.html">
+  <a href="index.html">
  			<img src="uadoptLogo.png" id="logo">
-</a>
+  </a>
 
-<h2>Please select your preferences for the breed traits below:</h2>
-<h3>Note: Any unanswered questions will be marked as 'no preference'.</h3>
+  <h2>Please select your preferences for the breed traits below:</h2>
+  <h3>Note: Any unanswered questions will be marked as 'no preference'.</h3>
 
   <!--initialiaze questionnaire form -->
   <form id="frm1" method = "post" action="http:students.engr.scu.edu/~stointon/Uadopt/insertuserdatatraits.php">
 
-<span class="question">
-<p>What do you want your dog's noise/barking level to be like?</p>
-  <input type="radio" name="barking" value="5"> A guard dog with a strong bark<br>
-  <input type="radio" name="barking" value="1"> No barking<br>
-  <input type="radio" name="barking" value="3"> No preference<br><br></span>
+  <span class="question">
+  <p>What do you want your dog's noise/barking level to be like?</p>
+    <input type="radio" name="barking" value="5"> A guard dog with a strong bark<br>
+    <input type="radio" name="barking" value="1"> No barking<br>
+    <input type="radio" name="barking" value="3"> No preference<br><br></span>
     
-<span class="question">
-<p>At its peak activity level, my dog should be able to... </p>
-  <input type="radio" name="energy" value="5"> Run and hike with me<br>
-  <input type="radio" name="energy" value="4"> Walk and play fetch<br>
-  <input type="radio" name="energy" value="3"> Play occasional tug of war<br>
-  <input type="radio" name="energy" value="2"> Lay around for the most part, with the occoasional short walk<br>
-  <input type="radio" name="energy" value="1"> Play on its own with minimal activity on my end<br><br></span>
+  <span class="question">
+  <p>At its peak activity level, my dog should be able to... </p>
+    <input type="radio" name="energy" value="5"> Run and hike with me<br>
+    <input type="radio" name="energy" value="4"> Walk and play fetch<br>
+    <input type="radio" name="energy" value="3"> Play occasional tug of war<br>
+    <input type="radio" name="energy" value="2"> Lay around for the most part, with the occoasional short walk<br>
+    <input type="radio" name="energy" value="1"> Play on its own with minimal activity on my end<br><br></span>
 
-<span class="question">
-<p>What do you want your dog's intelligence level to be on a scale of 1 to 5, with 5 being most intelligent? </p>
-  <input type="radio" name="intelligence" value="1"> 1<br>
-  <input type="radio" name="intelligence" value="2"> 2<br>
-  <input type="radio" name="intelligence" value="3"> 3<br>
-  <input type="radio" name="intelligence" value="4"> 4<br>
-  <input type="radio" name="intelligence" value="5"> 5<br><br></span>
+  <span class="question">
+  <p>What do you want your dog's intelligence level to be on a scale of 1 to 5, with 5 being most intelligent? </p>
+    <input type="radio" name="intelligence" value="1"> 1<br>
+    <input type="radio" name="intelligence" value="2"> 2<br>
+    <input type="radio" name="intelligence" value="3"> 3<br>
+    <input type="radio" name="intelligence" value="4"> 4<br>
+    <input type="radio" name="intelligence" value="5"> 5<br><br></span>
 
-<span class="question">
-<p>How much hair shedding are you comfortable with? </p>
-  <input type="radio" name="shedding" value="5"> I want the fluffiest dog possible, bring on the hair!<br>
-  <input type="radio" name="shedding" value="4"> I want a furry dog<br>
-  <input type="radio" name="shedding" value="3"> I want something in the middle<br>
-  <input type="radio" name="shedding" value="2"> I want a low shedding dog<br>
-  <input type="radio" name="shedding" value="1"> I want as little hair as possible<br><br></span>
+  <span class="question">
+  <p>How much hair shedding are you comfortable with? </p>
+    <input type="radio" name="shedding" value="5"> I want the fluffiest dog possible, bring on the hair!<br>
+    <input type="radio" name="shedding" value="4"> I want a furry dog<br>
+    <input type="radio" name="shedding" value="3"> I want something in the middle<br>
+    <input type="radio" name="shedding" value="2"> I want a low shedding dog<br>
+    <input type="radio" name="shedding" value="1"> I want as little hair as possible<br><br></span>
 
-<span class="question">
-<p>How do you want your dog's child friendliness level to rank on a scale of 1 to 5, with 5 being most child friendly? </p>
-  <input type="radio" name="kids" value="1"> 1<br>
-  <input type="radio" name="kids" value="2"> 2<br>
-  <input type="radio" name="kids" value="3"> 3<br>
-  <input type="radio" name="kids" value="4"> 4<br>
-  <input type="radio" name="kids" value="5"> 5<br><br></span>
+  <span class="question">
+  <p>How do you want your dog's child friendliness level to rank on a scale of 1 to 5, with 5 being most child friendly? </p>
+    <input type="radio" name="kids" value="1"> 1<br>
+    <input type="radio" name="kids" value="2"> 2<br>
+    <input type="radio" name="kids" value="3"> 3<br>
+    <input type="radio" name="kids" value="4"> 4<br>
+    <input type="radio" name="kids" value="5"> 5<br><br></span>
 
-<span class="question">
-<p>How cuddly and affectionate do you want your dog to be?</p>
-  <input type="radio" name="cuddle" value="1"> I prefer an independent dog<br>
-  <input type="radio" name="cuddle" value="2"> I want a mostly independent dog that still has a soft side<br>
-  <input type="radio" name="cuddle" value="3"> I want something in the middle<br>
-  <input type="radio" name="cuddle" value="4"> I want a dog that is very affectionate, but nothing over the top<br>
-  <input type="radio" name="cuddle" value="5"> I want to be smothered with attention and cuddles at all times<br><br></span>
+  <span class="question">
+  <p>How cuddly and affectionate do you want your dog to be?</p>
+    <input type="radio" name="cuddle" value="1"> I prefer an independent dog<br>
+    <input type="radio" name="cuddle" value="2"> I want a mostly independent dog that still has a soft side<br>
+    <input type="radio" name="cuddle" value="3"> I want something in the middle<br>
+    <input type="radio" name="cuddle" value="4"> I want a dog that is very affectionate, but nothing over the top<br>
+    <input type="radio" name="cuddle" value="5"> I want to be smothered with attention and cuddles at all times<br><br></span>
 
-<span class="question">
-<p>What do you look for in the temperament of a dog? </p>
-  <input type="radio" name="temperament" value="5"> Good temperament is a must, my dog should be friendly and playful with everyone<br>
-  <input type="radio" name="temperament" value="4"> Good temperament is always a plus<br>
-  <input type="radio" name="temperament" value="3"> Doesn't really matter to me<br>
-  <input type="radio" name="temperament" value="2"> I prefer a dog that is loyal to their owner<br>
-  <input type="radio" name="temperament" value="1"> I want a loyal watchdog that will protect me if needed (not reccommended for new owners)<br><br></span>
+  <span class="question">
+  <p>What do you look for in the temperament of a dog? </p>
+    <input type="radio" name="temperament" value="5"> Good temperament is a must, my dog should be friendly and playful with everyone<br>
+    <input type="radio" name="temperament" value="4"> Good temperament is always a plus<br>
+    <input type="radio" name="temperament" value="3"> Doesn't really matter to me<br>
+    <input type="radio" name="temperament" value="2"> I prefer a dog that is loyal to their owner<br>
+    <input type="radio" name="temperament" value="1"> I want a loyal watchdog that will protect me if needed (not reccommended for new owners)<br><br></span>
 
-<span class="question">
-<p>How much time is your household able to commit to dog maintenance? </p>
-  <input type="radio" name="time" value="1"> I want a super low maintenence dog<br>
-  <input type="radio" name="time" value="3"> I want something in between<br>
-  <input type="radio" name="time" value="5"> I prefer high maintenence!<br><br></span>
+  <span class="question">
+  <p>How much time is your household able to commit to dog maintenance? </p>
+    <input type="radio" name="time" value="1"> I want a super low maintenence dog<br>
+    <input type="radio" name="time" value="3"> I want something in between<br>
+    <input type="radio" name="time" value="5"> I prefer high maintenence!<br><br></span>
 
-<span class="question">
-<p>Do you want a dog that is easy to train? </p>
-  <input type="radio" name="training" value="5"> I am a new pet owner, so I need an easily trainable dog<br>
-  <input type="radio" name="training" value="4"> The easier the better!<br>
-  <input type="radio" name="training" value="3"> I want something in between<br>
-  <input type="radio" name="training" value="2"> I want a dog that requires a bit of work to train<br>
-  <input type="radio" name="training" value="1"> I want a challenge!<br><br></span>
+  <span class="question">
+  <p>Do you want a dog that is easy to train? </p>
+    <input type="radio" name="training" value="5"> I am a new pet owner, so I need an easily trainable dog<br>
+    <input type="radio" name="training" value="4"> The easier the better!<br>
+    <input type="radio" name="training" value="3"> I want something in between<br>
+    <input type="radio" name="training" value="2"> I want a dog that requires a bit of work to train<br>
+    <input type="radio" name="training" value="1"> I want a challenge!<br><br></span>
 
-<span class="question">
-<p>Do you want a dog that is prone to health problems? </p>
-  <input type="radio" name="health" value="5"> Healthy as possible please!<br>
-  <input type="radio" name="health" value="4"> Healthier than average is ideal<br>
-  <input type="radio" name="health" value="1"> I want a dog that is prone to health problems<br>
-  <input type="radio" name="health" value="3"> No preference<br><br></span>
+  <span class="question">
+  <p>Do you want a dog that is prone to health problems? </p>
+    <input type="radio" name="health" value="5"> Healthy as possible please!<br>
+    <input type="radio" name="health" value="4"> Healthier than average is ideal<br>
+    <input type="radio" name="health" value="1"> I want a dog that is prone to health problems<br>
+    <input type="radio" name="health" value="3"> No preference<br><br></span>
     
-<span class="question">
-<p>What size of dog are you looking for? </p>
-  <input type="radio" name="size" value="1"> Extra small (Chihuahua)<br>
-  <input type="radio" name="size" value="2"> Small (Beagle)<br>
-  <input type="radio" name="size" value="3"> Medium (Border Collie)<br>
-  <input type="radio" name="size" value="4"> Large (Golden Retriever)<br>
-  <input type="radio" name="size" value="5"> Extra large (Great Dane)<br><br></span>
+  <span class="question">
+  <p>What size of dog are you looking for? </p>
+    <input type="radio" name="size" value="1"> Extra small (Chihuahua)<br>
+    <input type="radio" name="size" value="2"> Small (Beagle)<br>
+    <input type="radio" name="size" value="3"> Medium (Border Collie)<br>
+    <input type="radio" name="size" value="4"> Large (Golden Retriever)<br>
+    <input type="radio" name="size" value="5"> Extra large (Great Dane)<br><br></span>
 
     <!--submit form -->
       <button class="button button1" input type="button" value="Submit" onclick='document.forms["frm1"].submit()'> Submit </button>
