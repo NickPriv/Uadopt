@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Search Breeds</title>
-	<link href="https://uadopt.netlify.com/overall_style.css" rel="stylesheet" type="text/css">
+	<link href="https://uadopt.netlify.com/overallStyle.css" rel="stylesheet" type="text/css">
         <link href="https://uadopt.netlify.com/logo.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
 	<script src="https://uadopt.netlify.com/search_script.js"></script>
