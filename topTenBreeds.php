@@ -18,7 +18,7 @@
         exit;
     }
     
-	/*collects user data*/
+	//collects user data
     $sqlUserdata = oci_parse($conn, "SELECT userID, noise, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, userSize, name FROM Adopter WHERE userID = (SELECT MAX(userID) from Adopter)");
     $res = oci_execute($sqlUserdata);
 
@@ -68,13 +68,13 @@
     }
     
     
-	/* orders matches from best to worst*/
+	//orders matches from best to worst
     $sqlGetMatch = oci_parse($conn, "SELECT breed FROM match 
     WHERE userID = (SELECT MAX(userID) from Adopter) 
     ORDER BY matchpercentage asc"); 
     $resMatch = oci_execute($sqlGetMatch);
 
-	/*loops through and displays top 5 matches*/
+	//loops through and displays top 5 matches
     for($x = 1; $x <= 5; $x++) {
         if (($rowMatch = oci_fetch_array($sqlGetMatch, OCI_BOTH)) != false) 
         {
