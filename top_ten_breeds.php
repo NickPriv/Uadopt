@@ -1,9 +1,13 @@
 <html>
 <head>
 	<link href="https://uadopt.netlify.com/overall_style.css" rel="stylesheet" type="text/css">
-        <link href="../logo.css" rel="stylesheet" type="text/css">
-</head> 
-	<body>
+        <link href="https://uadopt.netlify.com/logo.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+    <script src="https://uadopt.netlify.com/search_script.js"></script>
+</head>
+<body>
+    <a href="https://uadopt.netlify.com/index.html">
+        <img src="uadoptLogo.png" id="logo">
 	<?php
 
 	$cfg = parse_ini_file('setup.ini');
@@ -57,19 +61,26 @@
     oci_bind_by_name($sqlMatch, ':breed', $rowPetTraits[0]);
     oci_bind_by_name($sqlMatch, ':matchPercentage', $matchIndex);
     $res = oci_execute($sqlMatch);
-
     }
     
     
 
-    $sqlGetMatch = oci_parse($conn, "SELECT breed FROM match WHERE userID = (SELECT MAX(userID) from Adopter) AND Rownum <=5 ORDER BY matchpercentage");
+    $sqlGetMatch = oci_parse($conn, "SELECT breed FROM match 
+    WHERE userID = (SELECT MAX(userID) from Adopter) 
+    ORDER BY matchpercentage asc");
     $resMatch = oci_execute($sqlGetMatch);
 
-    $counter = 1;
-     while(($rowMatch = oci_fetch_array($sqlGetMatch, OCI_BOTH)) != false){
+    for($x = 1; $x <= 5; $x++) {
+        if (($rowMatch = oci_fetch_array($sqlGetMatch, OCI_BOTH)) != false)
+        {
+            echo "<p> Dog ".$x. ": " . $rowMatch[0]. "</p>";
+        }
+    }
+ 
+     /*while(($rowMatch = oci_fetch_array($sqlGetMatch, OCI_BOTH)) != false){
         echo "<p> Dog ".$counter.": " . $rowMatch[0]. "</p>";
         $counter++;
-    }
+    }*/
 
 
 

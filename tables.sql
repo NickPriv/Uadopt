@@ -92,7 +92,7 @@ INSERT INTO Pet values ('Great Pyrenees', 4, 5, 4, 5, 5, 5, 4, 4, 2, 2, 5, 'Grea
 INSERT INTO Pet values ('Newfoundland', 3, 3, 4, 5, 5, 5, 5, 3, 5, 2, 5, 'Newfoundland dogs are large, playful, and furry dogs that resemble bears, but sweetness and gentleness are the hallmark of the breed. They are generally quiet, especially compared to other large breeds. They make great companions, but for these same reasons they do not like to be left alone for long periods of time. Newfoundlands love to swim and romp around, so it is best to take them on long walks and provide an adequate sized backyard for them.', '"http://www.dogbreedchart.com/img/newfoundland.jpg"');      
 INSERT INTO Pet values ('Poodle', 4, 4, 5, 1, 5, 4, 5, 4, 5, 2, 4, 'Poodles are best known for their intelligence, athleticism and low shedding. They are very easy to train and very eager to please. Poodles are very attentive and obedient to their owners, but they also need substantial mental stimulation and physical activity in order to stay occupied, which could be challenging for a new pet owner.', '"http://www.dogbreedchart.com/img/poodle.jpg"');      
 INSERT INTO Pet values ('Rottweiler', 4, 4, 5, 4, 2, 2, 4, 5, 4, 2, 4, 'Rottweilers are a calm, confident, and courageous dog breed. This muscular dog needs space, exercise, and mental stimulation. With good training, socialization, and an assertive owner, this dog breed can make a great companion, but they are not recommended for first time owners because they are inclined towards dominance, which can lead to aggression if not trained properly.', '"http://www.dogbreedchart.com/img/rottweiler.jpg"');    
-INSERT INTO Pet values ('Vizsla', 5, 5, 4, 2, 5, 5, 5, 4, 5, 4, 4, 'Vizslas are known for being athletic, agile, and affectionate. They have been referred to as \“velcro dogs\” because they are always at their owner’s side. This breed gets along well with all people and all animals, making them a great option for households with young children and other pets. This breed does, however, require adequate socialization as a puppy to build its confidence, along with vigorous exercise and a lot of personal attention.', '"http://www.dogbreedchart.com/img/vizsla.jpg"');
+INSERT INTO Pet values ('Vizsla', 5, 5, 4, 2, 5, 5, 5, 4, 5, 4, 4, 'Vizslas are known for being athletic, agile, and affectionate. They have been referred to as \"velcro dogs\" because they are always at their owner''s side. This breed gets along well with all people and all animals, making them a great option for households with young children and other pets. This breed does, however, require adequate socialization as a puppy to build its confidence, along with vigorous exercise and a lot of personal attention.', '"http://www.dogbreedchart.com/img/vizsla.jpg"');
 
 INSERT INTO Adopter values (sequence_adopter.nextval, 'steve', 22, 'single', 'apartment', 'yes', 0, 'stable', 2, 5, 'yes', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
@@ -112,7 +112,7 @@ SET noise = 5,
 WHERE userID = (SELECT MAX(userID) from Adopter);
 
 SELECT photo from pet where breed IN
-(SELECT breed FROM match 
+(SELECT userID, breed, matchpercentage FROM match 
 WHERE userID = (SELECT MAX(userID) from Adopter) 
 AND Rownum <=5 
 ORDER BY matchpercentage);
@@ -126,5 +126,12 @@ WHERE userID = (SELECT MAX(userID) from Adopter)) ;
 AND Rownum <=5) 
 ORDER BY matchpercentage);
 
+Select breed, description, photo From pet where breed IN (SELECT breed, matchpercentage FROM match WHERE
+(userID = (SELECT MAX(userID) from Adopter))
+order by matchpercentage);
+
+
+SELECT breed, description, photo from pet where breed in (SELECT breed FROM match WHERE
+userID = '115');
 
 

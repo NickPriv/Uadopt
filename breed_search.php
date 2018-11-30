@@ -7,7 +7,7 @@
 	<script src="https://uadopt.netlify.com/search_script.js"></script>
 </head>
 <body>
-	<a href="index.html">
+	<a href="https://uadopt.netlify.com/index.html">
  		<img src="uadoptLogo.png" id="logo">
 	</a>
 	<p> Please select the checkbox next to dog you are interested in and then click the continue button. </p>
