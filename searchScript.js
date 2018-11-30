@@ -69,11 +69,11 @@ function displaySelectedBreeds() { // For NegativeTraitsSelection.html
 	var queryString = decodeURIComponent(window.location.search);
 	var queries = queryString.split("?");
 	var breedTraits = "";
-	for (var i=1; i<queries.length; i++) { //to do: only allow one breed selection
+	for (var i=1; i<queries.length; i++) {
 		breedTraits += (
 			"<u><em><strong><font size=\"20\">" + queries[i] + "</font></strong></em></u>   <br>" +
 			"<img src=" + breedPhotos.get(queries[i]) + " height=112 >" + 
-        "<p1>" + //to do: add dog breed description
+        "<p1>" + 
             "<ul>" +
                 "<li>Barking level: 5  <input type=\"checkbox\" name=\"barking\" > </li>" +
                 "<li>Activity level: 5  <input type=\"checkbox\" name=\"energy\" > </li>" +
