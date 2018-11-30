@@ -17,12 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 	if(isset($_POST['Yesbutton']))
 	{
 		//header('Location: http://students.engr.scu.edu/~stointon/Uadopt/breed_search.php');
-        header('Location: http://students.engr.scu.edu/~stointon/Uadopt/breed_search.php');
+        header('Location: http://students.engr.scu.edu/~stointon/Uadopt/breedSearch.php');
 	}
 	//goes to most important traits selection
 	else 
 	{
-		header('Location: https://uadopt.netlify.com/most_important_traits_selection.html');
+		header('Location: https://uadopt.netlify.com/mostImportantTraitsSelection.html');
 	}
 }
 
