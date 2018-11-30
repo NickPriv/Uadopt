@@ -1,12 +1,17 @@
 <html>
 <head>
+	<!-- initialize page-->
 	<link href="overallStyle.css" rel="stylesheet" type="text/css">
 	<link href="logo.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+
+<!--calculate.html specific styling-->
 <style>
 div.title {
     	padding-top: 30px;
 }
+
+/* calculate button styling*/
 div.calculate {
    	align-items: center;
    	text-align: center;
@@ -18,6 +23,8 @@ div.calculate {
     	font-size: 24px;
     	border-radius: 12px;
 }
+
+/* load gif styling */
 #load {
     	border-radius: 8px;
 	display: block;
@@ -28,11 +35,13 @@ div.calculate {
 	opacity: 0.0;
 }
 </style>
+
 </head>
 <body>
 	<a href="index.html">
  		<img src="uadoptLogo.png" id="logo">
 	</a>
+	
 	<div class="title">
 	<h1 style="text-align:center">Find your most compatible breeds:</h1>
 	</div>
@@ -47,6 +56,7 @@ div.calculate {
 
 <script type="text/javascript">
 
+//Changes loading gif opactiy from 0.0 to 0.9, making it visible for 1.5 seconds before redirecting to topFiveBreeds
 function displayLoading(){
 	var element = document.getElementById('load');
 	element.style.opacity = "0.9";
@@ -54,11 +64,8 @@ function displayLoading(){
 }
 
 function nextPage() {
-	window.location.href = "http://students.engr.scu.edu/~stointon/Uadopt/topTenBreeds.php";
+	window.location.href = "http://students.engr.scu.edu/~stointon/Uadopt/topFiveBreeds.php";
 }	
 
 </script>
-
-
-
 

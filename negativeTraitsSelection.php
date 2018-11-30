@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+	<!--Initialize page-->
         <title>Uadopt</title>
         <link href="https://uadopt.netlify.com/overallStyle.css" rel="stylesheet" type="text/css">
         <link href="https://uadopt.netlify.com/logo.css" rel="stylesheet" type="text/css">
@@ -9,29 +10,35 @@
 	
 	    
     </head>
+	
+<body>
         <a href="https://uadopt.netlify.com/index.html">
  		<img src="uadoptLogo.png" id="logo">
 	</a>
         <div>
             <h2>The traits of this dog breed have been ranked on a scale of 1 to 5, with 1= low and 5= high.</h2>
             <h2>Please select any boxes with a rank that you would not prefer in your ideal dog.</h2>
-            <form id="frm1">
+            <!-- initialize form -->
+	    <form id="frm1">
             <span id="info">
-            <?php
+            
+	<?php
 
+		    //retrieve user's breed in mind from the URL
             $myurl = $_SERVER['REQUEST_URI'];
             $temp = explode('?', $myurl);
             $breedName = end($temp);
             $addWhiteSpace = str_replace("%20"," ",$breedName);
 
-
+		//initialize database
             $cfg = parse_ini_file('setup.ini');
             $conn = oci_connect($cfg['db_user'], $cfg['db_pass'],$cfg['db_path']);
             if(!$conn){
                 echo "<br> connection failed:";
                 exit;
             }
-            
+		    
+            //get breed info
             $sql = oci_parse($conn, "SELECT breed, photo, description, noise, activityLevelDog, intelligence, hairShedding, goodWithKids, cuddly, temperment, timeCommitment, easeToTrain, health, petSize from Pet where breed = :breedNameSql");
             oci_bind_by_name($sql, ':breedNameSql', $addWhiteSpace);
             $res = oci_execute($sql);
@@ -41,7 +48,7 @@
             die('Could not get data: ');
             }        
 
-            
+            //display breed info
             while(($row = oci_fetch_array($sql, OCI_BOTH)) != false){
                 echo "<u><em><strong><font size=\"20\">". $row[0] ."</font></strong></em></u>   <br>" .
                     "<img src=" . $row[1] . " height=112 > <br>" . 
@@ -67,7 +74,8 @@
             </span>     
             </form>  
         </div> 
-        <button type="button" class="button" onclick="selectInitialTraits()">Next</button>
-    </body>
+	<!-- button runs selectInitialTraits to store responses and call the next page-->
+        <button type="button" class="button" onclick="selectInitialTraits()">Next</button> 
+	</body>
     
 </html>

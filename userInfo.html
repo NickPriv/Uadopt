@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!--Initialize page-->
 	<title>Enter User Info</title>
-	<link href="overallStyle.css" rel="stylesheet" type="text/css">
-	<link href="logo.css" rel="stylesheet" type="text/css">
+	<link href="overallStyle.css" rel="stylesheet" type="text/css"> 
+	<link href="logo.css" rel="stylesheet" type="text/css"> 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+	
+	<!--button syling-->
 	<style> 
-	       li {
-    		color: black;
+	li {
+		color: black;
     		font-family: Poppins;
     		font-size: 24px;
 		font-weight: bold;
-		}
-		form {
+	}
+	form {
 		font-size: 18px;
-		}
-		.button1 {
-      
+	}
+	.button1 {
     		padding: 5px 10px;
     		font-size: 18px;
     		border-radius: 8px;
-    		}
+    	}
 	</style>
 </head>
-<body>
 		<a href="index.html">
  			<img src="uadoptLogo.png" id="logo">
 		</a>
-		<form id="frm1" method = "post" action = "http:students.engr.scu.edu/~stointon/Uadopt/insertdata.php">
-		<ol>
+		<!-- initialize form-->
+		<form id="frm1" method = "post" action = "http:students.engr.scu.edu/~stointon/Uadopt/insertdata.php"> 
+		
+		<!-- user info questionaire -->
+		<ol> 
 		<li>What is your first name?</li><br>
 		<input type="text" name="name" required style= "width: 300px; font-size:16pt"><br><br>
 		<li>What is your age?</li><br>
@@ -58,8 +62,10 @@
 		<input type="radio" name="experience" value="yes" required>Yes<br>
 		<input type="radio" name="experience" value="no" required>No<br><br>
 		<li>Do you have a specific dog breed that you are already interested in?</li><br>
+			<!-- this button submits and redirects to breedSearch.php -->
 			<button class="button button1" input type="submit" name="Yesbutton" value= "Yes"> Yes </button>
-			<button class="button button1" input type="submit" name="Nobutton" value= "No"> No </button>
+			<!-- this button submits and redirects to mostImportantTraitSelection.html -->
+			<button class="button button1" input type="submit" name="Nobutton" value= "No"> No </button> 
 		</form> 
 </body>
 </html>

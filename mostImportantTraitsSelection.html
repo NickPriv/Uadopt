@@ -1,4 +1,5 @@
 <head>
+	<!-- Initialize page--->
 	<script type="text/javascript" src="searchScript.js"></script>
 	<link href="overallStyle.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
@@ -15,20 +16,23 @@
 	<a href="index.html">
  		<img src="uadoptLogo.png" id="logo">
 	</a>
-<h2>Select all traits that you consider important when choosing your ideal dog breed</h2>
-<form id="frm1">
-<input type="checkbox" name="barking" value="Noise/Barking"> Noise/Barking<br>
-<input type="checkbox" name="energy" value="Activity Level"> Activity Level<br>
-<input type="checkbox" name="intelligence" value="Intelligence"> Intelligence<br>
-<input type="checkbox" name="shedding" value="Hair Shedding"> Hair Shedding<br>
-<input type="checkbox" name="kids" value="Good With Children"> Good With Children<br>
-<input type="checkbox" name="cuddle" value="Cuddly"> Cuddly<br>
-<input type="checkbox" name="temperament" value="Temperament"> Temperament<br>
-<input type="checkbox" name="time" value="Time Commitment"> Time Commitment<br>
-<input type="checkbox" name="training" value="Easy To Train"> Easy To Train<br>
-<input type="checkbox" name="health" value="Health"> Health<br>
-<input type="checkbox" name="size" value="Size"> Size<br>
+	<!-- Initialize form--->
+	<h2>Select all traits that you consider important when choosing your ideal dog breed</h2>		
+	<form id="frm1">											
+	<input type="checkbox" name="barking" value="Noise/Barking"> Noise/Barking<br>
+	<input type="checkbox" name="energy" value="Activity Level"> Activity Level<br>
+	<input type="checkbox" name="intelligence" value="Intelligence"> Intelligence<br>
+	<input type="checkbox" name="shedding" value="Hair Shedding"> Hair Shedding<br>
+	<input type="checkbox" name="kids" value="Good With Children"> Good With Children<br>
+	<input type="checkbox" name="cuddle" value="Cuddly"> Cuddly<br>
+	<input type="checkbox" name="temperament" value="Temperament"> Temperament<br>
+	<input type="checkbox" name="time" value="Time Commitment"> Time Commitment<br>
+	<input type="checkbox" name="training" value="Easy To Train"> Easy To Train<br>
+	<input type="checkbox" name="health" value="Health"> Health<br>
+	<input type="checkbox" name="size" value="Size"> Size<br>
 
+	<!-- button calls selectAdditionalTraits to add data to the URL for the next page to utilize-->
 	<button class="button button1" input type="button" onclick="selectAdditionalTraits()">Next </button>
+
 </form>
 </body>
