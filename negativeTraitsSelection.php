@@ -10,6 +10,8 @@
 	
 	    
     </head>
+	
+<body>
         <a href="https://uadopt.netlify.com/index.html">
  		<img src="uadoptLogo.png" id="logo">
 	</a>
@@ -19,7 +21,8 @@
             <!-- initialize form -->
 	    <form id="frm1">
             <span id="info">
-            <?php
+            
+	<?php
 
 		    //retrieve user's breed in mind from the URL
             $myurl = $_SERVER['REQUEST_URI'];
@@ -73,6 +76,6 @@
         </div> 
 	<!-- button runs selectInitialTraits to store responses and call the next page-->
         <button type="button" class="button" onclick="selectInitialTraits()">Next</button> 
-    </body>
+	</body>
     
 </html>
