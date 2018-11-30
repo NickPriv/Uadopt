@@ -4,7 +4,7 @@
 	<link href="https://uadopt.netlify.com/overallStyle.css" rel="stylesheet" type="text/css">
         <link href="https://uadopt.netlify.com/logo.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
-	<script src="https://uadopt.netlify.com/search_script.js"></script>
+	<script src="https://uadopt.netlify.com/searchScript.js"></script>
 </head>
 <body>
 	<a href="https://uadopt.netlify.com/index.html">
