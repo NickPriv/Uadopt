@@ -26,7 +26,7 @@ function send() {
     		queryString += "?" + x.elements[i].value; // send name and value from form
     }
     console.log("queryString: " + queryString);
-    window.location.href = "http://students.engr.scu.edu/~stointon/Uadopt/negative_traits_selection.php" + queryString;
+    window.location.href = "http://students.engr.scu.edu/~stointon/Uadopt/negativeTraitsSelection.php" + queryString;
 	}
 function includes(array,trait) {
 	for (var i=0; i<array.length; i++) {
