@@ -83,16 +83,6 @@
             echo "<p> Dog ".$x. ": " . $rowMatch[0]. "</p>"; 
         }
     }
- 
-     /*while(($rowMatch = oci_fetch_array($sqlGetMatch, OCI_BOTH)) != false){
-        echo "<p> Dog ".$counter.": " . $rowMatch[0]. "</p>";
-        $counter++;
-    }*/
-
-
-
-    
-
 
 	?>
 </p>
